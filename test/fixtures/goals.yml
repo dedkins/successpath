@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  name: MyString
+  description: MyString
+  goaldate: 2013-10-07
+  image: MyString
+  url: MyString
+  priority: 1
+
+two:
+  user_id: 1
+  name: MyString
+  description: MyString
+  goaldate: 2013-10-07
+  image: MyString
+  url: MyString
+  priority: 1

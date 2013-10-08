@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @affirmation.user_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @affirmation.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_affirmation_path(@affirmation) %> |
+<%= link_to 'Back', affirmations_path %>
