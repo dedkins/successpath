@@ -10,6 +10,31 @@
   <%= @user.email %>
 </p>
 
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Goal Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% if @goals.present? %>
+	<% @goals.each do |g| %>
+	  <tr>
+	    <td><%= image_tag(g.image, size: "30x30") %></td>
+	    <td><%= g.name %></td>
+	    <td><%= g.description %></td>
+	    <td><%= g.goaldate %></td>
+	    <td><%= link_to 'Show', goal %></td>
+	    <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
+	    <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  </tr>
+	<% end %>
+<% end %>
+</table>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
