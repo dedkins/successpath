@@ -1,0 +1,40 @@
+<% currently_at 'Goals' %>
+
+<h1>My Goals</h1>
+<%= link_to 'New Goal', new_goal_path %>
+
+
+<table width="100%">
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Goaldate</th>
+    <th>Image</th>
+    <th>Url</th>
+    <th>Priority</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @goals.each do |goal| %>
+  <tr>
+    <td width="300px">
+        <% if goal.image? %>
+        <%= link_to image_tag(goal.image), goal.url %>
+        <% end %>
+    </td>
+    <td><%= goal.name %></td>
+    <td><%= goal.description %></td>
+    <td><%= goal.goaldate %></td>
+    <td><%= goal.priority %></td>
+    <td><%= link_to 'Show', goal %></td>
+    <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
+    <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

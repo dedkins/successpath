@@ -1,3 +1,71 @@
+.box {
+  width:48%;
+  height:300px;
+  padding:5px;
+  float:left;
+  img {
+    width:100%;
+    height:100%;
+  }
+  name {
+    font-size:3.5em;
+    color:gray;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  description {
+    font-size:1em;
+    color:gray;
+    margin:auto;
+  }
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 100%;
+  height: 300px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+.container {
+  width:100%;
+}
+
+
 body {
 	font-size:1.2em;
 	color: gray;

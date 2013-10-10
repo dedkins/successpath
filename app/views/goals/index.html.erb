@@ -1,41 +1,43 @@
-<% currently_at 'Goals' %>
+<% currently_at 'Goals'%>
 
-<h1>My Goals</h1>
-<%= link_to 'New Goal', new_goal_path %>
+<name>Goals</name>
 
+<%= link_to 'Add New Goal', new_goal_path, :method => 'Get' %>
 
-<table width="100%">
-  <tr>
-    <th></th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Goaldate</th>
-    <th>Image</th>
-    <th>Url</th>
-    <th>Priority</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="container" style="background:black">
 
-<% @goals.each do |goal| %>
-  <tr>
-    <td>
-        <% if goal.image? %>
-        <%= image_tag(goal.image, size:"200x150") %>
-        <% end %>
-    </td>
-    <td><%= goal.name %></td>
-    <td><%= goal.description %></td>
-    <td><%= goal.goaldate %></td>
-    <td><%= goal.url %></td>
-    <td><%= goal.priority %></td>
-    <td><%= link_to 'Show', goal %></td>
-    <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-    <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
+	<% @goals.each do |goal| %>
+		<div class="box">
+			<% if goal.image? %>
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+					<div class="flipper">
+					  <div class="front">
+					    <%= link_to image_tag(goal.image), goal.url %>
+					  </div>
+					  <div class="back">
+					    <wordbox>
+			        		<name><%= goal.name %></name>
+			        		<description><%= link_to 'Edit', edit_goal_path(goal) %></description><br/>
+			        		<description>
+			        			<%= goal.description %><br/>
+			        			<%= goal.goaldate %><br/>
+			        		</description>
+			        	</wordbox>
+					  </div>
+					</div>
+				</div>
+	        <% else %>
+	        	<wordbox>
+	        		<name><%= goal.name %></name>
+	        		<description><%= link_to 'Edit', edit_goal_path(goal) %></description><br/>
+	        		<description>
+	        			<%= goal.description %><br/>
+	        			<%= goal.goaldate %><br/>
+	        			
+	        		</description>
+	        	</wordbox>
+	        <% end %>
+	    </div>
+	<% end %>
+		
+</div>
