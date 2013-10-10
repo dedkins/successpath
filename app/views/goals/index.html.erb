@@ -12,7 +12,8 @@
 				<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
 					<div class="flipper">
 					  <div class="front">
-					    <%= link_to image_tag(goal.image), goal.url %>
+					    <%= link_to image_tag(goal.image), goal %>
+					    <div class="title"><%= number_to_percentage(goal.progress, precision: 0) %> and <%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve</div>
 					  </div>
 					  <div class="back">
 					    <wordbox>
