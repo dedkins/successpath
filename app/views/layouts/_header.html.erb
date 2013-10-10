@@ -1,17 +1,23 @@
 <div style="margin:auto;width:960px">
 <table width="100%">
 	<tr>
-		<td>
+		<td rowspan="2">
 			<%= image_tag("Logo.png", size:"400x70") %>
 		</td>
-		<td width="400px">
-          <%= yield :main_navigation %>
-        </td>
-		<td width="300px" style="margin-top:0;text-align:right;padding-right:90px">
+		<td width="300px" style="vertical-align:top;text-align:right">
 			<nav id="utility">
-			    name here
+			    <% if member_signed_in? %>
+			    <%= current_member.email %> | <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
+			    <% else %>
+			    	<%= link_to "Sign In", new_member_session_path %>
+			    <% end %>
 			</nav>
 		</td>
+	</tr>
+	<tr>
+		<td width="340px" style="text-align:right">
+          <%= yield :main_navigation %>
+        </td>
 	</tr>
 </table>
 

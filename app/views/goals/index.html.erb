@@ -1,8 +1,12 @@
-<h1>Listing goals</h1>
+<% currently_at 'Goals' %>
 
-<table>
+<h1>My Goals</h1>
+<%= link_to 'New Goal', new_goal_path %>
+
+
+<table width="100%">
   <tr>
-    <th>User</th>
+    <th></th>
     <th>Name</th>
     <th>Description</th>
     <th>Goaldate</th>
@@ -16,11 +20,14 @@
 
 <% @goals.each do |goal| %>
   <tr>
-    <td><%= goal.user_id %></td>
+    <td>
+        <% if goal.image? %>
+        <%= image_tag(goal.image, size:"200x150") %>
+        <% end %>
+    </td>
     <td><%= goal.name %></td>
     <td><%= goal.description %></td>
     <td><%= goal.goaldate %></td>
-    <td><%= goal.image %></td>
     <td><%= goal.url %></td>
     <td><%= goal.priority %></td>
     <td><%= link_to 'Show', goal %></td>
@@ -32,4 +39,3 @@
 
 <br />
 
-<%= link_to 'New Goal', new_goal_path %>

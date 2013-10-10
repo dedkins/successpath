@@ -4,23 +4,23 @@ nav#main_nav {
 	left: 0;
 	margin-top: -9px;	
 	li {
-		color: #fff;
+		color: gray;
 		display: inline-block;
 		margin: -8px 1px 1px 1px;
 		padding: 2px 15px;
 		a, a:link, a:visited {
-			color: #fff;
-			font-size: 1em;
+			color: gray;
+			font-size: 1.2em;
 			text-decoration: none;	
 		}
 		&.active {
-			color: #333;
+			color: black;
 			padding: 2px 15px;
 			border-bottom: 5px solid #31b7ea;
 			a,
 			a:link,
 			a:visited {
-				color: #fff;
+				color: black;
 			}	
 		}
 	}
