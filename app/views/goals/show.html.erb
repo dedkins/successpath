@@ -2,41 +2,34 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>User:</b>
-  <%= @goal.user_id %>
-</p>
+<div class="box">
+  <%= image_tag(@goal.image) %>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @goal.name %>
-</p>
+<div class="box">
+  <%= link_to 'Edit', edit_goal_path(@goal) %> | <%= link_to 'Back', goals_path %><br/>
+  <name><%= @goal.name %></name><br/>
+  <description style="padding-left:10px">
+    <%= @goal.description %><br/><br/>
+    Goal Date: <%= @goal.goaldate %>
+  </description>
+</div>
 
-<p>
-  <b>Description:</b>
-  <%= @goal.description %>
-</p>
+<div style="clear:both"/>
 
-<p>
-  <b>Goaldate:</b>
-  <%= @goal.goaldate %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @goal.image %>
-</p>
-
-<p>
-  <b>Url:</b>
-  <%= @goal.url %>
-</p>
-
-<p>
-  <b>Progress:</b>
-  <%= @goal.progress %>
-</p>
+<div style="height:90px;width:970px;position:relative;margin-left:-10px"/>
+      <script type="text/javascript"><!--
+      google_ad_client = "ca-pub-5451064655705220";
+      /* Large Horizontal - Goal Detail */
+      google_ad_slot = "7754657066";
+      google_ad_width = 970;
+      google_ad_height = 90;
+      //-->
+      </script>
+      <script type="text/javascript"
+      src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    </div>
 
 
-<%= link_to 'Edit', edit_goal_path(@goal) %> |
-<%= link_to 'Back', goals_path %>
+

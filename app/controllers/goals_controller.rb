@@ -2,7 +2,11 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    @goals = Goal.find_all_by_member_id(current_member, :order => "goaldate ASC")
+    if member_signed_in?
+      @goals = Goal.find_all_by_member_id(current_member, :order => "goaldate ASC")
+    else
+      @goals = Goal.limit(20)
+    end
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,7 +1,5 @@
 <% content_for :main_navigation do %>
 
-<% if member_signed_in? %>
-
 	<nav id="main_nav" role="navigation">
 	  <ul>
 	    <%= nav_tab 'Home', pages_home_path, current: current_tab %>
@@ -9,7 +7,5 @@
 	    <%= nav_tab 'Affirmations', affirmations_path, current: current_tab%>
 	  </ul>
 	 </nav>
-
-<% end %>
 
 <% end %>
