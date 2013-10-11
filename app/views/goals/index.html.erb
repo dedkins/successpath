@@ -1,7 +1,5 @@
 <% currently_at 'Goals'%>
 
-<name>Goals</name>
-
 <%= link_to 'Add New Goal', new_goal_path, :method => 'Get' %>
 
 <div class="container" style="background:black">
@@ -17,9 +15,9 @@
 					  </div>
 					  <div class="back">
 					    <wordbox>
-			        		<name><%= goal.name %></name>
-			        		<description><%= link_to 'Edit', edit_goal_path(goal) %></description><br/>
-			        		<description>
+			        		<name><%= goal.name %></name><br/>
+			        		<description><%= link_to 'Edit', edit_goal_path(goal) %><br/>
+			        			<%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
 			        			<%= goal.description %><br/>
 			        			<%= goal.goaldate %><br/>
 			        		</description>
@@ -29,12 +27,12 @@
 				</div>
 	        <% else %>
 	        	<wordbox>
-	        		<name><%= goal.name %></name>
-	        		<description><%= link_to 'Edit', edit_goal_path(goal) %></description><br/>
+	        		<name><%= goal.name %></name><br/>
 	        		<description>
 	        			<%= goal.description %><br/>
 	        			<%= goal.goaldate %><br/>
-	        			
+	        			<%= link_to 'Edit', edit_goal_path(goal) %> | 
+	        			<%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %>
 	        		</description>
 	        	</wordbox>
 	        <% end %>
