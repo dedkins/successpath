@@ -3,7 +3,9 @@
 <p id="notice"><%= notice %></p>
 
 <div class="box">
-  <%= image_tag(@goal.image) %>
+  <% if @goal.image? %>
+    <%= image_tag(@goal.image) %>
+  <% end %>
 </div>
 
 <div class="box">
