@@ -28,6 +28,7 @@
 /* entire container, keeps perspective */
 .flip-container {
   perspective: 1000;
+  -webkit-perspective: 1000;
 }
   /* flip the pane when hovered */
   .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -45,7 +46,7 @@
 .flipper {
   transition: 0.6s;
   transform-style: preserve-3d;
-
+  -webkit-transform-style: preserve-3d;
   position: relative;
 }
 
@@ -61,7 +62,6 @@
 /* front pane, placed above back */
 .front {
   z-index: 2;
-  -webkit-backface-visibility: hidden;
 }
 
 /* back, initially hidden pane */
