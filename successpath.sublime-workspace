@@ -511,7 +511,7 @@
 			"file": "app/views/goals/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 901,
+				"buffer_size": 1088,
 				"line_ending": "Unix"
 			}
 		},
@@ -806,7 +806,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -841,15 +841,15 @@
 					"file": "app/views/goals/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 901,
+						"buffer_size": 1088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								345,
-								345
+								196,
+								196
 							]
 						],
 						"settings":
