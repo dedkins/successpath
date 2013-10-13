@@ -1,7 +1,14 @@
 <% currently_at 'Home' %>
 
 <div style="width:100%">
-	<div style="float:left;height:520px;width:680px;padding:5px;background:gray"/>
+	<div style="float:left;width:680px"/>
+		<% if member_signed_in? %>
+			<%= render 'ideal_life' %>
+			<%= render 'networth' %>
+			<%= render 'gettingthere' %>
+		<% else %>
+			<div style="height:520px;background:#e9e9e9"></div>
+		<% end %>
 	</div>
 	<div style="float:right;width:260px;height:100%;margin-top:-5px">
 		<% unless member_signed_in? %>

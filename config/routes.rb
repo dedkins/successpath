@@ -5,6 +5,7 @@ Successpath::Application.routes.draw do
 
   get "pages/contact"
 
+
   resources :affirmations
 
 

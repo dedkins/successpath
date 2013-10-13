@@ -1,0 +1,26 @@
+<div style="margin-bottom:10px;padding:10px;width:660px;height:100%">
+	<div style="float:right"><%= button_to "Edit", edit_member_registration_path(@member), :method => 'get', :class => 'button' %></div>
+	<div style="float:left;padding:8px;font-size:1.5em;font-weight:bold">Personal Financial Statement</div>
+	<div style="padding:8px;clear:both;background:#e9e9e9;font-size:.9em">
+		"<%= @member.financialstatementquote %>"
+	</div>
+	<table width="100%">
+		<tr>
+			<td colspan="2" style="width:50%;text-align:center;font-size:1em">Assets</td>
+			<td colspan="2" style="text-align:center;font-size:1em">Monthly Cash Flow</td>
+		</tr>
+		<tr>
+			<td style="width:25%;text-align:center;background:gray;color:white">Desired</td>
+			<td style="width:25%;text-align:center;background:gray;color:white">Actual</td>
+			<td style="width:25%;text-align:center;background:gray;color:white">Desired</td>
+			<td style="text-align:center;background:gray;color:white">Actual</td>
+		</tr>
+		<tr style="font-size:1.2em">
+			<td style="font-size:.8em;text-align:center;padding:5px"><%= number_to_currency(@member.desiredassets) %></td>
+			<td style="font-size:.8em;text-align:center;padding:5px"><%= number_to_currency(@member.actualassets) %></td>
+			<td style="font-size:.8em;text-align:center;padding:5px"><%= number_to_currency(@member.desiredcf) %></td>
+			<td style="font-size:.8em;text-align:center;padding:5px"><%= number_to_currency(@member.actualcf) %></td>
+		</tr>
+	</table>
+
+</div>

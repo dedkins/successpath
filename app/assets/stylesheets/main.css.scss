@@ -20,8 +20,13 @@
   }
 }
 
-.signin {
-  padding:2px;  
+.input {
+  height:30px;
+  width: 70;
+  padding:0px 5px 10px;
+}
+.signin {  
+  margin:5px;
   font-weight:bold;
 }
 
@@ -30,8 +35,8 @@
   color:white;
   padding:5px 30px;
   border:0;
-  margin-left:-2px;
-  margin-top:5px;
+  margin-left:5px;
+  margin-top:10px;
 }
 
 /* entire container, keeps perspective */
@@ -118,6 +123,8 @@ a {
   &:hover {
     color: orange;
   }
+  img {outline : none;}
+  img {border : 0;}
 }
 
 div {
