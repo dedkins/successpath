@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   def home
-  	@member = Member.find(current_member)
+  	if member_signedin?
+  		@member = Member.find(current_member)
+  	end
   end
 
   def contact
