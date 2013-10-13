@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-  	if member_signedin?
+  	if member_signed_in?
   		@member = Member.find(current_member)
   	end
   end
