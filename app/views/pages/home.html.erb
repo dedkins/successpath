@@ -1,16 +1,18 @@
 <% currently_at 'Home' %>
 
 <div style="width:100%">
-	<div style="float:left;width:680px"/>
+	<div class="leftpage" />
 		<% if member_signed_in? %>
 			<%= render 'ideal_life' %>
+			<hr/>
 			<%= render 'networth' %>
+			<hr/>
 			<%= render 'gettingthere' %>
 		<% else %>
 			<div style="height:520px;background:#e9e9e9"></div>
 		<% end %>
 	</div>
-	<div style="float:right;width:260px;height:100%;margin-top:-5px">
+	<div class="sidebar">
 		<% unless member_signed_in? %>
 			<%= render "devise/sessions/new" %>
 		<% end %>

@@ -1,23 +1,20 @@
-<div style="margin:auto;width:960px">
-<table width="100%">
-	<tr>
-		<td rowspan="2">
-			<%= link_to image_tag("Logo.png", size:"400x70"), root_path %>
-		</td>
-		<td width="300px" style="vertical-align:top;text-align:right">
-			<nav id="utility">
-			    <% if member_signed_in? %>
-			    <%= current_member.email %> | <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
-			    <% else %>
-			    	<%= link_to "Sign In", new_member_session_path %>
-			    <% end %>
-			</nav>
-		</td>
-	</tr>
-	<tr>
-		<td width="340px" style="text-align:right">
-          <%= yield :main_navigation %>
-        </td>
-	</tr>
-</table>
+<div class="header">
+
+	<div class="headerleft">
+		<%= link_to image_tag("Logo.png", size:"400x70"), root_path %>
+	</div>
+
+	<div class="headerright">
+		<nav id="utility" style="text-align:right;font-size:.8em;padding:5px 20px 0 0">
+		    <% if member_signed_in? %>
+		    <%= current_member.email %> | <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
+		    <% else %>
+		    	<%= link_to "Sign In", new_member_session_path %>
+		    <% end %>
+		</nav>
+		<%= yield :main_navigation %>
+	</div>
+
+</div>
+
 

@@ -9,7 +9,11 @@ Successpath::Application.routes.draw do
   resources :affirmations
 
 
-  resources :goals
+  resources :goals do
+    member do
+      get 'achieved'
+    end
+  end
 
 
   resources :users

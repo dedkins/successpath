@@ -1,6 +1,20 @@
 class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
+
+  def achieved
+    @goal = Goal.find(params[:id])
+
+    respond_to do |format|
+      @goal.achievedate = Date.today
+      @goal.save
+      format.html {redirect_to goals_path}
+      format.json
+    end
+
+  end
+
+
   def index
     if member_signed_in?
       @goals = Goal.find_all_by_member_id(current_member, :order => "goaldate ASC")

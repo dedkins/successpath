@@ -1,13 +1,13 @@
-<div style="margin-bottom:10px;padding:10px;width:660px;height:100%">
+<div class="sectionsquare">
 		<div style="float:right"><%= button_to "Edit", edit_member_registration_path(@member), :class => 'button', :method => 'get' %></div>
-		<div style="float:left;padding:8px;font-size:1.5em;font-weight:bold">
+		<div class="sectiontitle">
 			<% if @member.mainlifetitle? %>
 				<%= @member.mainlifetitle %>
 			<% else %>
-			Nothing Here
+			Life Statement
 			<% end %>
 		</div>
-	<div style="clear:both;padding:8px;background:#e9e9e9;font-size:.9em">
+	<div class="quote">
 		"<%= @member.mainlifequote %>"
 	</div>
 </div>

@@ -1,8 +1,8 @@
 <% currently_at 'Goals'%>
 
-<div style="width:900px;padding:10px 30px;background:#e9e9e9;font-size:1.2em">
+<div class="topbanner">
 	<% if member_signed_in? %>
-		<%= link_to 'Add New Goal', new_goal_path, :method => 'Get' %>
+		<%= button_to 'Add New Goal', new_goal_path, :method => 'Get', :class => 'button' %>
 	<% else %>
 		As a member, you can create and manage your own list of goals here. <%= link_to 'Become a Member', new_member_registration_path %>
 	<% end %>
@@ -46,7 +46,8 @@
 	        			<%= goal.description %><br/>
 	        			<%= goal.goaldate %><br/>
 		        			<%= link_to 'Edit', edit_goal_path(goal) %> | 
-		        			<%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %>
+		        			<%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %> |
+		        			<%= link_to 'Achieved', achieved_goal_path(goal) %>
 		        		<% else %>
 	        				<%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve it<br/>
 	        				Created <%= distance_of_time_in_words(Time.now,goal.created_at) %> ago

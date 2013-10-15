@@ -1,3 +1,32 @@
+.header {
+  margin:auto;
+  width:960px;
+  height:80px;
+  border-bottom:#e9e9e9
+}
+
+.headerleft {
+  float:left;
+  width:50%;
+}
+
+.headerright {
+  float:right
+}
+
+.yield {
+  width:960px;
+  margin:auto  
+}
+
+.topbanner {
+  width:890px;
+  padding:10px 30px;
+  background:#e9e9e9;
+  font-size:1.2em;
+  margin:auto;
+}
+
 .box {
   width:48%;
   height:300px;
@@ -18,6 +47,39 @@
     color:gray;
     margin:auto;
   }
+}
+
+.leftpage {
+  float:left;
+  width:680px;
+}
+
+.sidebar {
+  float:right;
+  width:260px;
+  height:100%;
+  margin-top:-5px
+}
+
+.sectionsquare {
+  margin-bottom:10px;
+  padding:10px 10px 10px 0;
+  height:100%
+}
+
+.sectiontitle {
+  float:left;
+  padding:8px;
+  font-size:1.5em;
+  font-weight:bold
+}
+.quote {
+  clear:both;
+  padding:8px;
+  background:#ffffff;
+  font-size:1em;
+  color: #31b7ea;
+  font-weight:bold;
 }
 
 .input {
@@ -94,7 +156,8 @@
   }
 
 .container {
-  width:100%;
+  width:960px;
+  margin:auto
 }
 
 

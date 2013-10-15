@@ -28,8 +28,6 @@ GEM
     activesupport (3.2.11)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    annotate (2.5.0)
-      rake
     arel (3.0.2)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2-x86-mingw32)
@@ -138,7 +136,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  annotate (>= 2.5.0)
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
