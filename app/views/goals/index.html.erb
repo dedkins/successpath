@@ -10,52 +10,6 @@
 
 <div class="container" style="background:black">
 
-	<% @goals.each do |goal| %>
-		<div class="box">
-			<% if goal.image? %>
-				<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-					<div class="flipper">
-					  <div class="front">
-					    <%= link_to image_tag(goal.image), goal %>
-					    <div class="title"><%= number_to_percentage(goal.progress, precision: 0) %> and <%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve</div>
-					  </div>
-					  <div class="back">
-					    <wordbox>
-			        		<name><%= goal.name %></name><br/>
-			        		<% if member_signed_in? %>
-				        		<description>
-				        			<%= link_to 'Edit', edit_goal_path(goal) %> | <%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %> | <%= link_to 'Show Details', goal %><br/><br/>
-				        			<%= goal.description %><br/><br/>
-				        			Goal Data: <%= goal.goaldate %><br/>
-				        		</description>
-			        		<% else %>
-			        			<description>
-			        				<%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve it<br/>
-			        				Created <%= distance_of_time_in_words(Time.now,goal.created_at) %> ago
-			        			</description>
-			        		<% end %>
-			        	</wordbox>
-					  </div>
-					</div>
-				</div>
-	        <% else %>
-	        	<wordbox>
-	        		<name><%= goal.name %></name><br/>
-	        		<description>
-	        			<% if member_signed_in? %>
-	        			<%= goal.description %><br/>
-	        			<%= goal.goaldate %><br/>
-		        			<%= link_to 'Edit', edit_goal_path(goal) %> | 
-		        			<%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %> |
-		        			<%= link_to 'Achieved', achieved_goal_path(goal) %>
-		        		<% else %>
-	        				<%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve it<br/>
-	        				Created <%= distance_of_time_in_words(Time.now,goal.created_at) %> ago
-		        		<% end %>
-	        		</description>
-	        	</wordbox>
-	        <% end %>
-	    </div>
-	<% end %>
+	<%= render 'goaltiles' %>
 		
 </div>

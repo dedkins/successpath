@@ -1,0 +1,74 @@
+<div class="box">
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+		<div class="flipper">
+		  <div class="front" style="background:black;color:white;text-align:center;font-size:1.5em;line-height:260px">
+		    What Is It?
+		  </div>
+		  <div class="back">
+		    <wordbox>
+        		<name>What Is It?</name><br/>
+	        		<description>
+	        			Successpath.me is geared for people that want to change themselves...and ultimately
+	        			change their life.  It is designed to be a straightforward quick method to review goals and
+	        			affirmations on a daily basis - allowing you a simple push each day to meet them.
+	        		</description>
+        	</wordbox>
+		  </div>
+		</div>
+	</div>
+</div>
+<div class="box">
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+		<div class="flipper">
+		  <div class="front" style="background:orange;color:white;text-align:center;font-size:1.5em;line-height:260px">
+		    How Does It Work?
+		  </div>
+		  <div class="back">
+		    <wordbox>
+        		<name>How Does It Work?</name><br/>
+	        		<description>
+	        			That's up to you.  You simply add the goals you want to achieve in the goals tab, add some 
+	        			personal affirmations to help you rewire the way you look at things...then look at them each
+	        			day.
+	        		</description>
+        	</wordbox>
+		  </div>
+		</div>
+	</div>
+</div>
+<div class="box">
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+		<div class="flipper">
+		  <div class="front" style="background:#31b7ea;color:white;text-align:center;font-size:1.5em;line-height:260px">
+		    How Much?
+		  </div>
+		  <div class="back">
+		    <wordbox>
+        		<name>How Much?</name><br/>
+	        		<description>
+	        			Free.  Yup.
+	        		</description>
+        	</wordbox>
+		  </div>
+		</div>
+	</div>
+</div>
+<div class="box">
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+		<div class="flipper">
+		  <div class="front" style="background:black;color:white;text-align:center;font-size:1.5em;line-height:260px">
+		    How Do I Start?
+		  </div>
+		  <div class="back">
+		    <wordbox>
+        		<name>How Do I Start?</name><br/>
+	        		<description>
+	        			You can become a member by clicking <%= link_to 'HERE', new_member_registration_path %>.
+	        		</description>
+        	</wordbox>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<%= render 'goals/goaltiles' %>
