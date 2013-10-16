@@ -2,7 +2,7 @@
 
 <div class="topbanner">
 	<% if member_signed_in? %>
-		<%= button_to 'Add New Goal', new_goal_path, :method => 'Get', :class => 'button' %>
+		<%= button_to 'Add New Goal', new_goal_path, :method => 'get', :class => 'button' %>
 	<% else %>
 		As a member, you can create and manage your own list of goals here. <%= link_to 'Become a Member', new_member_registration_path %>
 	<% end %>

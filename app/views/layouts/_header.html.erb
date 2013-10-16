@@ -8,9 +8,12 @@
 		<div class="headerright">
 			<nav id="utility" style="text-align:right;font-size:.8em;padding:5px 20px 0 0">
 			    <% if member_signed_in? %>
-			    <%= current_member.email %> | <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
+			    <%= current_member.email %> | <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %> |
+			    <%= link_to 'Help', '#' %>
 			    <% else %>
-			    	<%= link_to "Sign In", new_member_session_path %>
+			    	<%= link_to "Sign In", new_member_session_path %> | 
+			    	<%= link_to "Sign Up", new_member_registration_path %> |
+			    	<%= link_to "Help", '#' %>
 			    <% end %>
 			</nav>
 			<%= yield :main_navigation %>

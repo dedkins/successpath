@@ -7,6 +7,8 @@ gem 'rails', '3.2.11'
 
 gem "pg", "~> 0.17.0"
 gem "devise"
+gem 'jquery_datepicker'
+gem 'jquery-ui-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
