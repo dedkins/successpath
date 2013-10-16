@@ -1,14 +1,23 @@
-@media screen and (max-width: 1124px){
+@media screen and (min-width: 968px){
+	section#mobile_header {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 968px){
-	
-	.yield {
-		width:100%;
+	section#regular_header {
+		display: none;
 	}
-
+	nav#main_nav {
+		font-size:1.5em;
+	}
+	.yield {
+		width: 100%;
+		min-width:800px;
+	}
 	.header {
-		width:100%;
+		width: 100%;
+		min-width:800px;
 	}
 	.leftpage {
 		width:100%;
