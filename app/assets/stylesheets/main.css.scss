@@ -68,11 +68,12 @@
 }
 
 .sectiontitle {
-  float:left;
-  padding:8px;
+  margin:auto;
   font-size:1.5em;
   font-weight:bold;
-  color:#31b7ea
+  color:#31b7ea;
+  display:table-cell;
+  vertical-align:middle
 }
 .quote {
   clear:both;
@@ -145,11 +146,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  display:table;
 }
 
 /* front pane, placed above back */
 .front {
   z-index: 2;
+  text-align:center;
 }
 
 /* back, initially hidden pane */

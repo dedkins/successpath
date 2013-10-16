@@ -1,0 +1,20 @@
+<div class="box">
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+		<div class="flipper">
+		  <div class="front" style="background:#31b7ea;color:white;text-align:center;font-size:1.5em">
+		    <div class="sectiontitle" style="color:white">
+				CashFlow<br/>
+				<description style="font-size:.5em;color:white">(<%= number_to_currency(@member.actualcf) %>)</description>
+			</div>
+		  </div>
+		  <div class="back">
+		    <wordbox>
+    			<div class="quote">
+    				Desired: <%= number_to_currency(@member.desiredcf) %><br/>
+    				Actual: <%= number_to_currency(@member.actualcf) %>
+				</div>
+        	</wordbox>
+		  </div>
+		</div>
+	</div>
+</div>

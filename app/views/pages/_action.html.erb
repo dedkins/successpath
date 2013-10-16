@@ -1,0 +1,24 @@
+<div class="box">
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+		<div class="flipper">
+		  <div class="front" style="background:black;color:white;text-align:center;font-size:1.5em;">
+		    <div class="sectiontitle">
+				<% if @member.actiontitle? %>
+					<%= @member.actiontitle %>
+				<% else %>
+				Action!
+				<% end %>
+			</div>
+		  </div>
+		  <div class="back">
+		    <wordbox>
+	        		<description>
+	        			<div class="quote">
+							"<%= @member.actionquote %>"
+						</div>
+	        		</description>
+        	</wordbox>
+		  </div>
+		</div>
+	</div>
+</div>

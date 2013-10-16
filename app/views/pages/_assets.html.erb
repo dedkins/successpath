@@ -1,0 +1,22 @@
+<div class="box">
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+		<div class="flipper">
+		  <div class="front" style="background:orange;color:white;text-align:center;font-size:1.5em">
+		    <div class="sectiontitle" style="color:white">
+				Assets<br/>
+				<description style="font-size:.5em;color:white">(<%= number_to_currency(@member.actualassets) %>)</description>
+			</div>
+		  </div>
+		  <div class="back">
+		    <wordbox>
+	        		<description>
+	        			<div class="quote">
+	        				Desired: <%= number_to_currency(@member.desiredassets) %><br/>
+	        				Actual: <%= number_to_currency(@member.actualassets) %>
+						</div>
+	        		</description>
+        	</wordbox>
+		  </div>
+		</div>
+	</div>
+</div>
