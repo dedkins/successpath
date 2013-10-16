@@ -2,6 +2,9 @@
 	section#mobile_header {
 		display: none;
 	}
+	.mobile_sidebar {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 968px){
@@ -23,10 +26,10 @@
 		width:100%;
 	}
 	.sidebar {
-		display:hidden;
+		display:none;
 	}
 	.topbanner {
-		width:100%;
+		width:90%;
 	}
 	.sectionsquare {
 		width:100%;
