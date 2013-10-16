@@ -12,5 +12,6 @@ class Member < ActiveRecord::Base
 
   has_many :goals
   has_many :affirmations
+  has_many :tasks
   
 end

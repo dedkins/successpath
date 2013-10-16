@@ -32,6 +32,8 @@ class GoalsController < ApplicationController
   # GET /goals/1.json
   def show
     @goal = Goal.find(params[:id])
+    @opentasks = Task.where("goal_id = ? and achievedate is ?", @goal.id, nil)
+    @closedtasks = Task.where("goal_id = ? and achievedate is not ?", @goal.id, nil)
 
     respond_to do |format|
       format.html # show.html.erb

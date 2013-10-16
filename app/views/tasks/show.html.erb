@@ -1,0 +1,37 @@
+<%= currently_at 'Tasks' %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Member:</b>
+  <%= @task.member_id %>
+</p>
+
+<p>
+  <b>Goal:</b>
+  <%= @task.goal_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @task.name %>
+</p>
+
+<p>
+  <b>Duedate:</b>
+  <%= @task.duedate %>
+</p>
+
+<p>
+  <b>Achievedate:</b>
+  <%= @task.achievedate %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @task.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

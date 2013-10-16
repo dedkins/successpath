@@ -2,7 +2,7 @@
 
 <div class="topbanner">
 	<% if member_signed_in? %>
-		<%= button_to 'Edit Your Squares', edit_member_registration_path(@member), :method => 'get', :class => 'button' %>
+		<%= link_to 'Edit Your Squares', edit_member_registration_path(@member), :method => 'get', :class => 'button-link' %>
 	<% end %>
 </div>
 
@@ -12,6 +12,7 @@
 		<%= render 'assets' %>
 		<%= render 'cashflow' %>
 		<%= render 'action' %>
+		<%= render 'tasks/opentasktiles' %>
 	<% else %>
 		<%= render 'hometiles' %>
 	<% end %>

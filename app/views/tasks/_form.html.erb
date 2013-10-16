@@ -1,0 +1,33 @@
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @goal.present? %>
+    <%= f.hidden_field :goal_id, :value => @goal.id %>
+  <% else %>
+  <div class="field">
+    Associate a Goal (optional)<br />
+    <%= collection_select(@tag, :goal_id, @goals, :id, :name, {include_blank: 'None'}) %>
+  </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    Date You Want To Achieve By<br />
+    <%= f.text_field :duedate, :class => 'datepicker' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", :class => 'button' %>
+  </div>
+<% end %>

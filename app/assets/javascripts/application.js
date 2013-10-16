@@ -16,5 +16,5 @@
 //= require_tree .
 //= require boxhover
 $(function() {
-  $('.datepicker').datepicker();
+  $('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
 });

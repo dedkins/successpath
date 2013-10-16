@@ -1,0 +1,18 @@
+<%= currently_at 'Tasks' %>
+
+<div class="topbanner">
+    <% if member_signed_in? %>
+        <%= link_to 'Add New Task', new_task_path, :method => 'get', :class => 'button-link' %>
+    <% else %>
+        As a member, you can create and manage your own list of tasks here. <%= link_to 'Become a Member', new_member_registration_path %>
+    <% end %>
+</div>
+
+<%= render 'opentasktiles' %>
+
+<div style="clear:both"/>
+<hr/>
+
+<%= render 'closedtasktiles' %>
+
+

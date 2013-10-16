@@ -20,6 +20,12 @@ Successpath::Application.routes.draw do
     end
   end
 
+  resources :tasks do
+    member do
+      get 'achieved'
+    end
+  end
+
 
   resources :users
 
