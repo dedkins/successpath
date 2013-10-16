@@ -1,0 +1,5 @@
+<% @members.each do |m| %>
+	
+	<%= m.email %><%= link_to 'Delete', m, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>

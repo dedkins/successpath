@@ -17,7 +17,7 @@ class GoalsController < ApplicationController
 
   def index
     if member_signed_in?
-      @goals = Goal.where("member_id = ? and achievedate is ?", current_member, nil)
+      @goals = Goal.where("member_id = ? and achievedate is ?", current_member, nil).order("goaldate ASC")
     else
       @goals = Goal.limit(20)
     end

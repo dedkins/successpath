@@ -1,5 +1,10 @@
 Successpath::Application.routes.draw do
+  
   devise_for :members
+
+  scope '/admin' do
+    resources :members
+  end
 
   get "pages/home"
 
