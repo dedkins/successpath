@@ -17,7 +17,7 @@ class GoalsController < ApplicationController
 
   def index
     if member_signed_in?
-      @goals = Goal.find_all_by_member_id(current_member, :order => "goaldate ASC")
+      @goals = Goal.where("member_id = ? and achievedate is ?", current_member, nil)
     else
       @goals = Goal.limit(20)
     end
