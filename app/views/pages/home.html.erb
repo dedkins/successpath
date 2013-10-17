@@ -3,6 +3,7 @@
 	<% if member_signed_in? %>
 	<div class="topbanner">
 		<%= link_to 'Edit Your Squares', edit_member_registration_path(@member), :method => 'get', :class => 'button-link' %>
+		<%= link_to 'New Task', new_task_path, :method => 'get', :class => 'button-link' %>
 	</div>
 		<%= render 'ideal_life2' %>
 		<%= render 'assets' %>
