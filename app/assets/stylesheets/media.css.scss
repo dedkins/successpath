@@ -37,4 +37,15 @@
 	.container {
 		width:100%;
 	}
+	.box {
+		width:48%;
+		height:350px;
+	}
+	.flip-container, .front, .back {
+	  height: 350px;
+	}
+	body {
+		font-size:1.5em;
+	}
+
 }
