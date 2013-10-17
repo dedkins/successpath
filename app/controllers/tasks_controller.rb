@@ -19,7 +19,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @opentasks = Task.where("member_id = ? and achievedate is ?", current_member, nil)
+    @opentasks = Task.where("member_id = ? and achievedate is ?", current_member, nil).order("duedate ASC")
     @closedtasks = Task.where("member_id = ? and achievedate is not ?", current_member, nil)
 
     respond_to do |format|
