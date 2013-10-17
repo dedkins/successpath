@@ -4,7 +4,7 @@
 	<% if member_signed_in? %>
 		<%= link_to 'Add New Goal', new_goal_path, :method => 'get', :class => 'button-link' %>
 	<% else %>
-		As a member, you can create and manage your own list of goals here. <%= link_to 'Become a Member', new_member_registration_path %>
+		<%= link_to 'Become a Member', new_member_registration_path, :class => "button-link" %> and Create Your Own Goals Like These!
 	<% end %>
 </div>
 

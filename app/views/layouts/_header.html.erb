@@ -1,10 +1,9 @@
 <section id="regular_header">
 	<div class="header">
 
-		<div class="headerleft">
+		<div class="headerstandard">
 			<%= link_to image_tag("Logo.png", size:"400x70"), root_path %>
 		</div>
-
 		<div class="headerright">
 			<nav id="utility" style="text-align:right;font-size:.8em;padding:5px 20px 0 0">
 			    <% if member_signed_in? %>
@@ -23,18 +22,11 @@
 </section>
 <section id="mobile_header">
 	<div class="header">
-		<div class="headerleft">
-			<%= link_to image_tag("Logo.png", size:"400x70"), root_path %>
-		</div><br/>
+		<div class="headermobile">
+			<%= link_to image_tag("Logo.png"), root_path %>
+		</div>
 
 		<div class="headerright">
-			<nav id="utility" style="text-align:right;font-size:.8em;padding:5px 20px 0 0;margin-top:-25px">
-			    <% if member_signed_in? %>
-			    <%= current_member.email %> | <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
-			    <% else %>
-			    	<%= link_to "Sign In", new_member_session_path %>
-			    <% end %>
-			</nav>
 			<%= yield :main_navigation %>
 		</div>
 

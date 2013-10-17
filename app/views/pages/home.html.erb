@@ -1,11 +1,9 @@
 <% currently_at 'Home' %>
 
-<div class="topbanner">
 	<% if member_signed_in? %>
+	<div class="topbanner">
 		<%= link_to 'Edit Your Squares', edit_member_registration_path(@member), :method => 'get', :class => 'button-link' %>
-	<% end %>
-</div>
-	<% if member_signed_in? %>
+	</div>
 		<%= render 'ideal_life2' %>
 		<%= render 'assets' %>
 		<%= render 'cashflow' %>
@@ -42,5 +40,9 @@
 			</div>
 		</div>
 	<% else %>
+	<div class="topbanner">
+		<%= link_to 'Sign In', new_member_session_path, :method => 'get', :class => 'button-link' %> or
+		<%= link_to 'Become a Member', new_member_registration_path, :method => 'get', :class => 'button-link' %> and Edit Your Tiles
+	</div>
 		<%= render 'hometiles' %>
 	<% end %>

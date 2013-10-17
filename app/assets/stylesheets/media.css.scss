@@ -5,6 +5,9 @@
 	.mobile_sidebar {
 		display: none;
 	}
+	.headermobile {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 968px){
@@ -12,7 +15,13 @@
 		display: none;
 	}
 	nav#main_nav {
-		font-size:1.5em;
+		li {
+	    a, a:link, a:visited {
+	      color: gray;
+	      font-size: 3em;
+	      text-decoration: none;  
+    		}
+    	}
 	}
 	.yield {
 		width: 100%;
@@ -22,6 +31,12 @@
 		width: 100%;
 		min-width:800px;
 	}
+	.headerstandard {
+		display: none;
+	}
+	nav#utility {
+		display: none;
+	}
 	.leftpage {
 		width:100%;
 	}
@@ -29,7 +44,8 @@
 		display:none;
 	}
 	.topbanner {
-		width:90%;
+		margin-top: 160px;
+		width:100%;
 	}
 	.sectionsquare {
 		width:100%;
@@ -39,10 +55,10 @@
 	}
 	.box {
 		width:48%;
-		height:350px;
+		height:300px;
 	}
 	.flip-container, .front, .back {
-	  height: 350px;
+	  height: 300px;
 	}
 	body {
 		font-size:1.5em;
