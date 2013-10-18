@@ -181,12 +181,10 @@ nav#main_nav {
 /* entire container, keeps perspective */
 .flip-container {
   perspective: 1000;
-  -webkit-perspective: 1000;
 }
   /* flip the pane when hovered */
   .flip-container:hover .flipper, .flip-container.hover .flipper {
     transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
   }
 
 .flip-container, .front, .back {
@@ -198,16 +196,13 @@ nav#main_nav {
 .flipper {
   transition: 0.6s;
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
   position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
   position: absolute;
   top: 0;
   left: 0;
@@ -223,7 +218,6 @@ nav#main_nav {
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
 }
 
 .title {
