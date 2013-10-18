@@ -1,4 +1,10 @@
 <%= form_for(@affirmation) do |f| %>
+
+<div class="topbanner" style="margin-bottom:20px">
+  <%= f.submit 'Save', :class => 'button-link', :style => 'font-size:1.1em' %> this Affirmation or
+  <%= link_to 'Go Back', affirmations_path, :class => 'button-link' %>
+</div>
+
   <% if @affirmation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@affirmation.errors.count, "error") %> prohibited this affirmation from being saved:</h2>
@@ -11,15 +17,12 @@
     </div>
   <% end %>
 
+
+<div class="inputbox">
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    Type the Affirmation Below<br />
+    <%= f.text_field :title, :class => 'inputfield' %>
   </div>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+
 <% end %>

@@ -40,11 +40,11 @@ class AffirmationsController < ApplicationController
   # POST /affirmations
   # POST /affirmations.json
   def create
-    @affirmation = Affirmation.new(params[:affirmation])
+    @affirmation = current_member.affirmations.build(params[:affirmation])
 
     respond_to do |format|
       if @affirmation.save
-        format.html { redirect_to @affirmation, notice: 'Affirmation was successfully created.' }
+        format.html { redirect_to affirmations_path, notice: 'Affirmation was successfully created.' }
         format.json { render json: @affirmation, status: :created, location: @affirmation }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class AffirmationsController < ApplicationController
 
     respond_to do |format|
       if @affirmation.update_attributes(params[:affirmation])
-        format.html { redirect_to @affirmation, notice: 'Affirmation was successfully updated.' }
+        format.html { redirect_to affirmations_path, notice: 'Affirmation was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
