@@ -210,6 +210,9 @@ nav#main_nav {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
   position: absolute;
   top: 0;
   left: 0;
