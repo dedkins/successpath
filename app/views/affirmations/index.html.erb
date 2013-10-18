@@ -1,7 +1,11 @@
 <% currently_at 'Affirmations' %>
 
 <div class="topbanner">
-  <%= link_to 'New Affirmation', new_affirmation_path, :class => 'button-link' %>
+  <% if member_signed_in? %>
+    <%= link_to 'New Affirmation', new_affirmation_path, :class => 'button-link' %>
+  <% else %>
+    <%= link_to 'Become a Member and Create Your Own', new_member_registration_path, :class => 'button-link' %>
+  <% end %>
 </div>
 
 
@@ -15,19 +19,21 @@
   </ul>
 </div>
 
-<hr/>
-<div style="width:97%;background:#e9e9e9;padding:20px;font-weight:bold">
-  Edit your Affirmations or <%= link_to 'Add a New One', new_affirmation_path, :class => 'button-link', :style => 'font-size:.9em' %>
-</div> 
+<% if member_signed_in? %>
+  <hr/>
+  <div style="width:97%;background:#e9e9e9;padding:20px;font-weight:bold">
+    Edit your Affirmations or <%= link_to 'Add a New One', new_affirmation_path, :class => 'button-link', :style => 'font-size:.9em' %>
+  </div> 
 
-<div style="width:100%">
-  <% @affirmations.each do |affirmation| %>
-  <div class="field" style="float:right;padding:10px 0;width:78%">
-    <%= affirmation.title %>
+  <div style="width:100%">
+    <% @affirmations.each do |affirmation| %>
+    <div class="field" style="float:right;padding:10px 0;width:78%">
+      <%= affirmation.title %>
+    </div>
+    <div style="float:left;width:20%;padding-top:10px">
+      <%= link_to 'Edit', edit_affirmation_path(affirmation), :class => 'button-link', :style => 'font-size:.7em' %>
+      <%= link_to 'Delete', affirmation, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'delete-button-link', :style => 'font-size:.7em' %>
+    </div>
+    <% end %>
   </div>
-  <div style="float:left;width:20%;padding-top:10px">
-    <%= link_to 'Edit', edit_affirmation_path(affirmation), :class => 'button-link', :style => 'font-size:.7em' %>
-    <%= link_to 'Delete', affirmation, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'delete-button-link', :style => 'font-size:.7em' %>
-  </div>
-  <% end %>
-</div>
+<% end %>

@@ -2,7 +2,11 @@ class AffirmationsController < ApplicationController
   # GET /affirmations
   # GET /affirmations.json
   def index
-    @affirmations = Affirmation.all
+    if member_signed_in?
+      @affirmations = Affirmation.find_all_by_member_id(current_member)
+    else
+      @affirmations = Affirmation.limit(10)
+    end
 
     respond_to do |format|
       format.html # index.html.erb

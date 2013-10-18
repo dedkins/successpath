@@ -39,7 +39,21 @@
 	</div>
 </div>
 <div class="box">
-	<iframe width="305" height="250" src="//www.youtube.com/embed/hzBCI13rJmA?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+		<div class="flipper">
+		  <div class="front">
+		    <iframe width="305" height="250" src="//www.youtube.com/embed/hzBCI13rJmA?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>
+		  </div>
+		  <div class="back">
+		    <wordbox>
+        		<name>Add Your Motivational Videos</name><br/>
+	        		<description>
+	        			Flip back over and watch this video some more.
+	        		</description>
+        	</wordbox>
+		  </div>
+		</div>
+	</div>
 </div>
 <div class="box">
 	<div style="height:250px;width:250px;margin:0 25px"/>
@@ -56,7 +70,31 @@
 		</script>
 	</div>
 </div>
-
+<div class="box">
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+		<div class="flipper">
+		  <div class="front">
+		    <div class="flexslider" style="width:300px">
+			  <ul class="slides">
+			    <% @affirmations.each do |affirmation| %>
+			      <li style="padding:85px 0;font-size:1em">
+			        <%= affirmation.title %>
+			      </li>
+			    <% end %>
+			  </ul>
+			</div>
+		  </div>
+		  <div class="back">
+		    <wordbox>
+        		<name>Create Your Own Affirmations</name><br/>
+	        		<description>
+	        			Flip back over and see recent real affirmations created by our members!
+	        		</description>
+        	</wordbox>
+		  </div>
+		</div>
+	</div>
+</div>
 <div class="box">
 	<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
 		<div class="flipper">

@@ -5,7 +5,9 @@ class PagesController < ApplicationController
   		@opentasks = Task.where("member_id = ? and achievedate is ? and duedate <= ?", current_member, nil, Date.today).order("duedate ASC").limit(4)
   		@goals_next30 = Goal.where("member_id = ? and achievedate is ?", current_member, nil).limit(4)
   	end
-  	@goals_next30 = Goal.limit(4).order("created_at DESC")
+  	@goals_next30 = Goal.where("image != ?", "").limit(4)
+  	@tasks = Task.limit(10)
+  	@affirmations = Affirmation.limit(10)
   end
 
   def contact
