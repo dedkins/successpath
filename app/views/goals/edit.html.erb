@@ -1,8 +1,8 @@
 <% currently_at 'Goals' %>
 
-<h1>Editing the <%= @goal.name %> Goal</h1>
+<div class="topbanner" style="margin-bottom:20px">
+  Editing the <%= @goal.name %> Goal
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @goal %> |
-<%= link_to 'Back', goals_path %>

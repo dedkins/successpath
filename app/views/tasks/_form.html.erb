@@ -1,4 +1,5 @@
 <%= form_for(@task) do |f| %>
+
   <% if @task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -14,20 +15,24 @@
   <% if @goal.present? %>
     <%= f.hidden_field :goal_id, :value => @goal.id %>
   <% else %>
-  <div class="field">
-    Associate a Goal (optional)<br />
-    <%= collection_select(@tag, :goal_id, @goals, :id, :name, {include_blank: 'None'}) %>
+
+  <div class="inputbox">
+    <div class="field">
+      Associate a Goal (optional)<br />
+      <%= collection_select(@tag, :goal_id, @goals, :id, :name, {include_blank: 'None'}, :class => 'inputfield') %>
+    </div>
+    <% end %>
+    <div class="field">
+      Name the Task<br />
+      <%= f.text_field :name, :class => 'inputfield' %>
+    </div>
+    <div class="field">
+      Due Date<br />
+      <%= f.text_field :duedate, :class => 'datepicker' %>
+    </div>
+
+    <%= f.submit 'Save', :class => 'button-link', :style => 'font-size:1.1em' %> or
+        <%= link_to 'Cancel', tasks_path, :class => 'button-link' %> This New Task
   </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    Date You Want To Achieve By<br />
-    <%= f.text_field :duedate, :class => 'datepicker' %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Save", :class => 'button' %>
-  </div>
+
 <% end %>

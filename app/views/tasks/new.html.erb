@@ -1,7 +1,9 @@
 <%= currently_at 'Tasks' %>
 
-<h1>New task</h1>
+<div class="topbanner" style="font-weight:bold;margin-bottom:20px">
+  Add a New Task
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', tasks_path %>
+<div style="margin:auto;width:50%">
+	<%= render 'form' %>
+</div>

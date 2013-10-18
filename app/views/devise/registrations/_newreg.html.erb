@@ -1,18 +1,16 @@
-<div style="margin:15px 0 15px 0;width:240px;height:350px;padding:10px;box-shadow:1px 5px 5px #888888;background:#e9e9e9;border-radius:5px">
-
-<div style="width:250px;background:gray;color:white;margin:-10px 5px 10px -10px;text-align:center;padding:5px">Become a Member</div>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 
-<div class="signin">Email</div>
-<div class="input"><%= f.email_field :email, :autofocus => true, :placeholder => "Email", :style => "padding-left:5px;line-height:200%;width:220px;font-size:.8em" %></div>
-<div class="signin">Password</div>
-<div class="input"><%= f.password_field :password, :placeholder => "Password", :style => "padding-left:5px;line-height:200%;width:220px;font-size:.8em" %></div>
-<div class="signin">Confirm Password</div>
-<div class="input"><%= f.password_field :password_confirmation, :placeholder => "Confirm Password", :style => "padding-left:5px;line-height:200%;width:220px;font-size:.8em" %></div>
-<div class="signin"><%= f.submit "Save", :class => "button" %>
+<div class="inputbox">
+	<div class="field">Email</div>
+	<%= f.email_field :email, :autofocus => true, :placeholder => "Email", :class => 'inputfield' %>
+	<div class="field">Password</div>
+	<%= f.password_field :password, :placeholder => "Password", :class => 'inputfield' %>
+	<div class="field">Confirm Password</div>
+	<%= f.password_field :password_confirmation, :placeholder => "Confirm Password", :class => 'inputfield', :style => 'margin-bottom:20px' %>
 
+	<%= f.submit "Go!", :class => "button-link", :style => 'font-size:1.1em' %>
+	<%= link_to 'Sign In Instead', new_member_session_path, :class => 'button-link' %>
+</div>
 
 <% end %>
-
-</div>

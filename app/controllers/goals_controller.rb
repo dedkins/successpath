@@ -17,9 +17,11 @@ class GoalsController < ApplicationController
 
   def index
     if member_signed_in?
-      @goals = Goal.where("member_id = ? and achievedate is ?", current_member, nil).order("goaldate ASC")
+      @goals_next30 = Goal.where("member_id = ? and achievedate is ? and goaldate >= ? and goaldate <= ?", current_member, nil, Date.today, Date.today + 30).order("goaldate ASC")
+      @goals_future = Goal.where("member_id = ? and achievedate is ? and goaldate >= ?", current_member, nil, Date.today + 30).order("goaldate ASC")
     else
-      @goals = Goal.limit(20)
+      @goals_next30 = Goal.where("achievedate is ? and goaldate >= ? and goaldate <= ?", nil, Date.today, Date.today + 30).limit(10)
+      @goals_future = Goal.where("achievedate is ? and goaldate >= ?", nil, Date.today + 30).limit(10)
     end
 
     respond_to do |format|

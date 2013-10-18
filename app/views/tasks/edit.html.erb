@@ -1,8 +1,9 @@
 <%= currently_at 'Tasks' %>
 
-<h1>Editing task</h1>
+<div class="topbanner" style="font-weight:bold;margin-bottom:20px">
+  Edit the Task
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @task %> |
-<%= link_to 'Back', tasks_path %>
+<div style="margin:auto;width:50%">
+	<%= render 'form' %>
+</div>
