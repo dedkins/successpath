@@ -22,10 +22,10 @@
 
 <div style="width:100%">
   <% @affirmations.each do |affirmation| %>
-  <div class="field" style="float:right;padding:10px 0;width:80%">
+  <div class="field" style="float:right;padding:10px 0;width:78%">
     <%= affirmation.title %>
   </div>
-  <div style="float:left;width:18%;padding-top:10px">
+  <div style="float:left;width:20%;padding-top:10px">
     <%= link_to 'Edit', edit_affirmation_path(affirmation), :class => 'button-link', :style => 'font-size:.7em' %>
     <%= link_to 'Delete', affirmation, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'delete-button-link', :style => 'font-size:.7em' %>
   </div>
