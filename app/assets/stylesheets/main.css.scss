@@ -197,6 +197,7 @@ nav#main_nav {
 /* flip speed goes here */
 .flipper {
   transition: 0.6s;
+  -webkit-transition: 0.6s;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   position: relative;
