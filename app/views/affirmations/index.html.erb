@@ -24,4 +24,14 @@
 
 <br />
 
+<div class="flexslider">
+  <ul class="slides">
+    <% @affirmations.each do |affirmation| %>
+      <li>
+        <%= affirmation.title %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
 <%= link_to 'New Affirmation', new_affirmation_path %>

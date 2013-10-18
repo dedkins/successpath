@@ -15,6 +15,10 @@
 //= require jquery.ui.all
 //= require_tree .
 //= require boxhover
+//= require jquery.flexslider
+
 $(function() {
   $('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
 });
+
+

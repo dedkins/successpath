@@ -49,6 +49,8 @@ GEM
     dotenv (0.9.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    flexslider (2.2.0)
+      sass-rails (>= 3.1.0)
     foreman (0.63.0)
       dotenv (>= 0.7)
       thor (>= 0.13.6)
@@ -151,6 +153,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
+  flexslider
   foreman
   jquery-rails
   jquery-ui-rails

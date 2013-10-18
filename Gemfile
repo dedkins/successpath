@@ -9,6 +9,7 @@ gem "pg", "~> 0.17.0"
 gem "devise"
 gem 'jquery_datepicker'
 gem 'jquery-ui-rails'
+gem 'flexslider'
 
 # Gems used only for assets and not required
 # in production environments by default.
