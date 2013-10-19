@@ -29,9 +29,9 @@
 		    <wordbox>
         		<name>How Does It Work?</name><br/>
 	        		<description>
-	        			That's up to you.  You simply add the goals you want to achieve in the goals tab, add some 
-	        			personal affirmations to help you rewire the way you look at things...then look at them each
-	        			day.
+	        			That's up to you.  You simply add the goals you want to achieve in the goals tab, then add 
+	        			some tasks to accomplish them.  Then add some personal affirmations to help you rewire the 
+	        			way you look at things...then look at them each	day.
 	        		</description>
         	</wordbox>
 		  </div>
@@ -77,7 +77,7 @@
 		    <div class="flexslider" style="width:300px">
 			  <ul class="slides">
 			    <% @affirmations.each do |affirmation| %>
-			      <li style="padding:85px 0;font-size:1em">
+			      <li style="padding:85px 0;font-size:1.5em;line-height:.9em;font-weight:normal">
 			        <%= affirmation.title %>
 			      </li>
 			    <% end %>
