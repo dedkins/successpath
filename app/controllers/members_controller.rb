@@ -4,7 +4,12 @@ class MembersController < ApplicationController
   end
 
   def create
-    super
+    @member = Member.new(params[:member])
+
+    if @member.save!
+      MemberMailer.welcome_email(@member).deliver
+      format.html { sign_in_and_redirect(:member, @member, notice: 'Welcome Aboard!  You are now a member!') } 
+    end
   end
 
   def update

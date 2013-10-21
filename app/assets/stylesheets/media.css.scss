@@ -11,6 +11,9 @@
 }
 
 @media screen and (max-width: 968px){
+	#error_explanation {
+		margin-top:150px;
+	}
 	section#regular_header {
 		display: none;
 	}

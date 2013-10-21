@@ -1,71 +1,135 @@
+<%= currently_at 'Home' %>
+
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
+<div class="topbanner">
+  <%= f.submit 'Save', :class => 'button-link', :style => 'font-size:1.1em' %> Your Changes or <%= link_to 'Go Back', root_path, :class => 'button-link' %>
+</div>
 
-  <div style="margin-bottom:10px;padding:10px;width:660px;height:100%">
-      <div style="float:left;padding:8px;font-size:1.5em;font-weight:bold">
-        Main Life Title:
-        <%= f.text_field :mainlifetitle, :placeholder => "Enter the Title Here" %>
+<div class="box">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+    <div class="flipper">
+      <div class="front" style="background:black">
+        <div class="sectiontitle" style="color:white">
+          <% if @member.mainlifetitle.present? %>
+            <%= @member.mainlifetitle %>
+          <% else %>
+            Flip Over to Add Your Life Mission Statement
+          <% end %>
+        </div>
       </div>
-    <div style="clear:both;padding:8px;background:#e9e9e9;font-size:.9em">
-      Main Life Quote:
-      <%= f.text_area :mainlifequote, :size => "75x10", :placeholder => "Add your comments here" %>
-    </div>
-  </div>
-  <div style="clear:both"></div>
-
-  <div style="margin-bottom:10px;padding:10px;width:660px;height:100%">
-    <div style="float:left;padding:8px;font-size:1.5em;font-weight:bold">Personal Financial Statement</div>
-    <div style="padding:8px;clear:both;background:#e9e9e9;font-size:.9em">
-      Customize your statement quote:
-      <%= f.text_area :financialstatementquote, :size => "75x8", :placeholder => "Customize your statement here..." %>
-    </div>
-    <table width="80%">
-      <tr>
-        <td colspan="2" style="width:50%;text-align:center;font-size:1em">Assets</td>
-        <td colspan="2" style="text-align:center;font-size:1em">Monthly Cash Flow</td>
-      </tr>
-      <tr>
-        <td style="width:25%;text-align:center;background:gray;color:white">Desired</td>
-        <td style="width:25%;text-align:center;background:gray;color:white">Actual</td>
-        <td style="width:25%;text-align:center;background:gray;color:white">Desired</td>
-        <td style="text-align:center;background:gray;color:white">Actual</td>
-      </tr>
-      <tr style="font-size:1.2em">
-        <td style="font-size:.8em;text-align:center;padding:5px">
-          <%= f.text_field :desiredassets %>
-        </td>
-        <td style="font-size:.8em;text-align:center;padding:5px">
-          <%= f.text_field :actualassets %>
-        </td>
-        <td style="font-size:.8em;text-align:center;padding:5px">
-          <%= f.text_field :desiredcf %>
-        </td>
-        <td style="font-size:.8em;text-align:center;padding:5px">
-          <%= f.text_field :actualcf %>
-        </td>
-      </tr>
-    </table>
-
-  </div>
-
-  <div style="margin-bottom:10px;padding:10px;width:660px;height:100%">
-      <div style="float:left;padding:8px;font-size:1.5em;font-weight:bold">
-        Your Custom Action Title:
-        <%= f.text_field :actiontitle %>
+      <div class="back">
+        <wordbox>
+            <name><%= f.text_field :mainlifetitle, :placeholder => "Main Life Title" %></name><br/>
+              <description>
+                <%= f.text_area :mainlifequote, :size => "30x10", :placeholder => "Add your own powerful personal statement for how you want your life to be.  Be great.  Think big." %>
+              </description>
+          </wordbox>
       </div>
-    <div style="clear:both;padding:8px;background:#e9e9e9;font-size:.9em">
-      <%= f.text_area :actionquote, :size => "75x10", :placeholder => "Add your custom comments here..." %>
     </div>
   </div>
-  <div style="clear:both"></div>
+</div>
+<div class="box">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+    <div class="flipper">
+      <div class="front" style="background:orange">
+        <div class="sectiontitle" style="color:white">
+          <% if @member.desiredassets.present? %>
+            <%= @member.desiredassets %>
+          <% else %>
+            Flip Over and Update with Your Asset Goals
+          <% end %>
+        </div>
+      </div>
+      <div class="back">
+        <wordbox>
+            <name>Add your assets</name><br/>
+              <description>
+                Desired Assets:<br/>
+                <%= f.text_field :desiredassets %>
+                <br/>
+                Actual Assets:<br/>
+                <%= f.text_field :actualassets %>
+              </description>
+          </wordbox>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="box">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+    <div class="flipper">
+      <div class="front" style="background:#31b7ea">
+        <div class="sectiontitle" style="color:white">
+          <% if @member.desiredcf.present? %>
+            <%= @member.desiredcf %>
+          <% else %>
+            Flip Over and Update Your Cashflow Goals
+          <% end %>
+        </div>
+      </div>
+      <div class="back">
+        <wordbox>
+            <name>Add your cashflow goals</name><br/>
+              <description>
+                Desired Monthly Cashflow:<br/>
+                <%= f.text_field :desiredcf %>
+                <br/>
+                Actual Monthly Cashflow:<br/>
+                <%= f.text_field :actualcf %>
+              </description>
+          </wordbox>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="box">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+    <div class="flipper">
+      <div class="front" style="background:black">
+        <div class="sectiontitle" style="color:white">
+          <% if @member.actiontitle.present? %>
+            <%= @member.actiontitle %>
+          <% else %>
+            Flip Over to Add Your Personal Action Statement
+          <% end %>
+        </div>
+      </div>
+      <div class="back">
+        <wordbox>
+              <description>
+                <%= f.text_field :actiontitle, :placeholder => 'Add Your Action Title' %>
+                <%= f.text_area :actionquote, :size => "30x10", :placeholder => "Add your powerful personal statement here.  This is about you - put something that will motivate you here" %>
+          </wordbox>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="box">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+    <div class="flipper">
+      <div class="front" style="background:black">
+        <div class="sectiontitle" style="color:white">
+          Change your Email
+        </div>
+      </div>
+      <div class="back">
+        <wordbox>
+            <name>Change your Email</name><br/>
+              <description>
+                <div><%= f.label :email %><br />
+                <%= f.email_field :email, :autofocus => true %></div>
+          </wordbox>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -83,8 +147,4 @@
   <div><%= f.submit 'Save', :class => 'button' %></div>
 <% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button' %></p>
-
-<%= link_to "Back", :back %>
+<%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button' %></p>

@@ -13,5 +13,14 @@ class Member < ActiveRecord::Base
   has_many :goals
   has_many :affirmations
   has_many :tasks
+
+  def update_with_password(params={}) 
+    current_password = params.delete(:current_password)
+    if params[:password].blank? 
+      params.delete(:password) 
+      params.delete(:password_confirmation) if params[:password_confirmation].blank? 
+    end 
+    update_attributes(params) 
+  end
   
 end
