@@ -10,9 +10,9 @@ class Member < ActiveRecord::Base
   :financialstatementquote, :actionquote
   # attr_accessible :title, :body
 
-  has_many :goals
-  has_many :affirmations
-  has_many :tasks
+  has_many :goals, :dependent => :destroy
+  has_many :affirmations, :dependent => :destroy
+  has_many :tasks, :dependent => :destroy
 
   def update_with_password(params={}) 
     current_password = params.delete(:current_password)

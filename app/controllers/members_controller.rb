@@ -8,7 +8,7 @@ class MembersController < ApplicationController
 
     if @member.save!
       MemberMailer.welcome_email(@member).deliver
-      format.html { sign_in_and_redirect(:member, @member, notice: 'Welcome Aboard!  You are now a member!') } 
+      sign_in_and_redirect(:member, @member) 
     end
   end
 
