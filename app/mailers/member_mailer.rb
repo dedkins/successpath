@@ -7,3 +7,5 @@ class UserMailer < ActionMailer::Base
     @url  = "http://www.successpath.me/members/sign_in"
     mail(:to => user.email, :bcc => 'dedkins@edkinsgroup.com', :subject => "Welcome Aboard!")
   end
+
+end
