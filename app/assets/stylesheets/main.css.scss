@@ -53,14 +53,17 @@ nav#main_nav {
 }
 
 .footer {
-  clear:both;
   text-align:center;
-  padding-top:50px;
+  margin-top:50px;
   height:150px;
   width:960px;
   margin:auto;
-  position: absolute; /* to keep .footer on bottom */
+  position: relative; /* to keep .footer on bottom */
   bottom: 0px;    /* to keep .footer on bottom */
+}
+.clearfooter {
+  height:150px;
+  clear:both;
 }
 
 .topbanner {
@@ -277,11 +280,15 @@ nav#main_nav {
   }
 
 .container {
+  position:relative;
   width:960px;
   margin:auto
 }
-
+html{
+  height:100%;
+}
 body {
+  height:100%;
 	font-size:1.2em;
 	color: gray;
 	font-family: 'Lato', sans-serif;

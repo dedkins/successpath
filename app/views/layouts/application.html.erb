@@ -26,16 +26,20 @@
 </head>
 <body>
 <div class="container">
+  <div class="header">
+    <%= render 'layouts/header' %>
+  </div>
   <div class="yield">
-  	<%= render 'layouts/header' %>
-
-  	<%= yield %>
+  	
+    <%= yield %>
 
   </div>
-  <div class="footer">
+  
+</div>
+<div class="clearfooter"></div>
+<div class="footer">
       <%= link_to "Sign Out", destroy_member_session_path, :method => :delete, :class => 'button-link' %> <%= link_to 'Help', '#', :class => 'button-link' %> <br/><br/>
     Copyright 2013 | Edkins Group
   </div>
-</div>
 </body>
 </html>

@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"goal",
+				"goal_id"
+			],
+			[
+				"tasks",
+				"tasks_path"
+			],
+			[
+				"cu",
+				"current_member"
+			],
+			[
+				"find",
+				"find_all_by_member_id"
+			],
+			[
+				"affirma",
+				"affirmations"
+			],
+			[
+				"goals_",
+				"goals_future"
+			],
+			[
+				"input",
+				"inputfield"
+			],
+			[
+				"button",
+				"button-link"
+			],
+			[
 				"head",
 				"headermobile"
 			],
@@ -46,10 +78,6 @@
 			[
 				"time",
 				"distance_of_time_in_words"
-			],
-			[
-				"find",
-				"find_all_by_building_id"
 			],
 			[
 				"font",
@@ -240,10 +268,6 @@
 				"border-bottom"
 			],
 			[
-				"cu",
-				"current_sign_in_at"
-			],
-			[
 				"padd",
 				"padding-top"
 			],
@@ -350,10 +374,6 @@
 			[
 				"card_",
 				"card_code"
-			],
-			[
-				"button",
-				"button_to"
 			],
 			[
 				"pro",
@@ -494,26 +514,6 @@
 			[
 				"backgrou",
 				"background	background-color: hex"
-			],
-			[
-				"he",
-				"height"
-			],
-			[
-				"pas",
-				"password_required"
-			],
-			[
-				"auth",
-				"authentications"
-			],
-			[
-				"p",
-				"params"
-			],
-			[
-				"spac",
-				"spaces"
 			]
 		]
 	},
@@ -523,15 +523,7 @@
 			"file": "app/assets/stylesheets/main.css.scss",
 			"settings":
 			{
-				"buffer_size": 5453,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/layouts/_header.html.erb",
-			"settings":
-			{
-				"buffer_size": 953,
+				"buffer_size": 6864,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,48 +531,8 @@
 			"file": "app/assets/stylesheets/media.css.scss",
 			"settings":
 			{
-				"buffer_size": 865,
+				"buffer_size": 963,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/layouts/application.html.erb",
-			"settings":
-			{
-				"buffer_size": 710,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/tasks/show.html.erb",
-			"settings":
-			{
-				"buffer_size": 445,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/tasks/new.html.erb",
-			"settings":
-			{
-				"buffer_size": 104,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/goals_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2409,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/tasks/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 450,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -608,61 +560,78 @@
 	},
 	"file_history":
 	[
-		"/C/Users/david/successpath/app/controllers/pages_controller.rb",
 		"/C/Users/david/successpath/app/views/pages/home.html.erb",
-		"/C/Users/david/successpath/app/views/pages/_hometiles.html.erb",
-		"/C/Users/david/successpath/app/views/goals/index.html.erb",
-		"/C/Users/david/successpath/app/assets/stylesheets/navigation.css.scss",
-		"/C/Users/david/Downloads/SuccessPath Logo.png",
-		"/C/Users/david/successpath/app/assets/stylesheets/application.css",
-		"/C/Users/david/successpath/app/views/goals/show.html.erb",
+		"/C/Users/david/successpath/app/views/devise/registrations/edit.html.erb",
+		"/C/Users/david/successpath/app/views/layouts/application.html.erb",
 		"/C/Users/david/successpath/app/controllers/tasks_controller.rb",
 		"/C/Users/david/successpath/app/views/tasks/_form.html.erb",
+		"/C/Users/david/successpath/app/controllers/application_controller.rb",
+		"/C/Users/david/successpath/app/controllers/members_controller.rb",
+		"/C/Users/david/successpath/app/assets/javascripts/application.js",
+		"/C/Users/david/successpath/app/views/devise/registrations/_edit_password.html.erb",
+		"/C/Users/david/successpath/app/mailers/member_mailer.rb",
+		"/C/Users/david/successpath/app/views/welcom_email.html.erb",
+		"/C/Users/david/successpath/config/routes.rb",
+		"/C/Users/david/successpath/config/environments/development.rb",
+		"/C/Users/david/successpath/app/controllers/registrations_controller.rb",
+		"/C/Users/david/successpath/Gemfile",
+		"/C/Users/david/successpath/app/assets/stylesheets/media.css.scss",
+		"/C/Users/david/successpath/app/views/affirmations/index.html.erb",
+		"/C/Users/david/successpath/app/models/member.rb",
+		"/C/Users/david/successpath/app/controllers/pages_controller.rb",
+		"/C/Users/david/successpath/app/views/devise/registrations/_newreg.html.erb",
+		"/C/Users/david/successpath/app/views/devise/sessions/_new.html.erb",
+		"/C/Users/david/successpath/app/controllers/goals_controller.rb",
+		"/C/Users/david/successpath/app/views/pages/_assets.html.erb",
+		"/C/Users/david/successpath/app/views/pages/_cashflow.html.erb",
+		"/C/Users/david/successpath/app/views/affirmations/edit.html.erb",
+		"/C/Users/david/successpath/app/views/affirmations/new.html.erb",
+		"/C/Users/david/successpath/app/views/devise/registrations/new.html.erb",
+		"/C/Users/david/successpath/config/locales/devise.en.yml",
+		"/C/Users/david/successpath/app/views/pages/_hometiles.html.erb",
+		"/C/Users/david/successpath/app/assets/stylesheets/flexslider.css",
+		"/C/Users/david/successpath/app/controllers/affirmations_controller.rb",
+		"/C/Users/david/successpath/app/views/affirmations/_form.html.erb",
+		"/C/Users/david/successpath/app/views/goals/index.html.erb",
+		"/C/Users/david/successpath/app/assets/javascripts/jquery.flexslider.js",
+		"/C/Users/david/successpath/app/views/tasks/show.html.erb",
+		"/C/Users/david/successpath/app/views/tasks/index.html.erb",
+		"/C/Users/david/successpath/app/views/layouts/_header.html.erb",
+		"/C/Users/david/successpath/app/assets/stylesheets/application.css",
+		"/C/Users/david/successpath/app/views/devise/sessions/new.html.erb",
+		"/C/Users/david/successpath/app/views/tasks/new.html.erb",
+		"/C/Users/david/successpath/app/views/tasks/edit.html.erb",
+		"/C/Users/david/successpath/app/views/goals/_form.html.erb",
+		"/C/Users/david/successpath/app/views/goals/edit.html.erb",
+		"/C/Users/david/successpath/app/views/goals/new.html.erb",
+		"/C/Users/david/successpath/app/views/goals/_goaltiles_next30.html.erb",
+		"/C/Users/david/successpath/app/views/goals/_goaltiles_future.html.erb",
+		"/C/Users/david/successpath/app/assets/stylesheets/navigation.css.scss",
+		"/C/Users/david/Downloads/SuccessPath Logo.png",
+		"/C/Users/david/successpath/app/views/goals/show.html.erb",
 		"/C/Users/david/successpath/app/views/tasks/_closedtasktiles.html.erb",
 		"/C/Users/david/successpath/app/views/tasks/_opentasktiles.html.erb",
-		"/C/Users/david/successpath/app/controllers/goals_controller.rb",
 		"/C/Users/david/successpath/app/views/tasks/_tasktiles.html.erb",
-		"/C/Users/david/successpath/app/views/tasks/index.html.erb",
-		"/C/Users/david/successpath/config/routes.rb",
 		"/C/Users/david/successpath/app/models/goal.rb",
 		"/C/Users/david/successpath/app/models/task.rb",
-		"/C/Users/david/successpath/app/views/tasks/edit.html.erb",
-		"/C/Users/david/successpath/app/models/member.rb",
-		"/C/Users/david/successpath/app/assets/javascripts/application.js",
 		"/C/Users/david/successpath/app/views/layouts/_main_nav.html.erb",
-		"/C/Users/david/successpath/app/views/goals/new.html.erb",
-		"/C/Users/david/successpath/Gemfile",
-		"/C/Users/david/successpath/app/views/goals/_form.html.erb",
-		"/C/Users/david/successpath/app/views/layouts/_header.html.erb",
 		"/C/Users/david/successpath/app/views/members/index.html.erb",
-		"/C/Users/david/successpath/config/environments/development.rb",
 		"/C/Users/david/successpath/config/initializers/devise.rb",
 		"/C/Users/david/successpath/.gitignore",
 		"/C/Users/david/successpath/config/environments/production.rb",
 		"/C/Users/david/successpath/.env",
-		"/C/Users/david/successpath/app/views/devise/registrations/new.html.erb",
 		"/C/Users/david/successpath/app/views/devise/registrations/index.html.erb",
-		"/C/Users/david/successpath/app/controllers/members_controller.rb",
-		"/C/Users/david/successpath/app/views/devise/registrations/_newreg.html.erb",
-		"/C/Users/david/successpath/app/views/devise/sessions/new.html.erb",
-		"/C/Users/david/successpath/app/views/devise/sessions/_new.html.erb",
 		"/C/Users/david/successpath/Procfile",
-		"/C/Users/david/successpath/app/views/devise/registrations/edit.html.erb",
 		"/C/Users/david/successpath/app/views/pages/_ideal_life2.html.erb",
 		"/C/Users/david/successpath/app/views/pages/_action.html.erb",
-		"/C/Users/david/successpath/app/views/pages/_cashflow.html.erb",
-		"/C/Users/david/successpath/app/views/pages/_assets.html.erb",
 		"/C/Users/david/successpath/app/views/pages/_ideal_life.html.erb",
 		"/C/Users/david/successpath/app/views/pages/_networth.html.erb",
-		"/C/Users/david/successpath/app/views/layouts/application.html.erb",
 		"/C/Users/david/successpath/app/views/layouts/_mobile_header.html.erb",
 		"/C/Users/david/successpath/app/views/goals/_goaltiles.html.erb",
 		"/C/Users/david/successpath/app/views/pages/_gettingthere.html.erb",
 		"/C/Users/david/successpath/app/views/pages/_form.html.erb",
 		"/C/Users/david/successpath/app/views/pages/edit.html.erb",
-		"/C/Users/david/successpath/app/views/goals/edit.html.erb",
 		"/C/Users/david/successpath/app/assets/stylesheets/main.css.scss",
-		"/C/Users/david/successpath/app/controllers/application_controller.rb",
 		"/C/Users/david/successpath/app/helpers/application_helper.rb",
 		"/C/Users/david/successpath/app/views/users/show.html.erb",
 		"/C/Users/david/successpath/db/migrate/20131010052830_add_progress_to_goals.rb",
@@ -670,8 +639,6 @@
 		"/C/Users/david/successpath/app/models/affirmation.rb",
 		"/C/Users/david/successpath/app/assets/javascripts/goals_popup.js",
 		"/C/Users/david/successpath/app/assets/javascripts/popup.js",
-		"/C/Users/david/successpath/app/views/affirmations/index.html.erb",
-		"/C/Users/david/successpath/app/views/affirmations/new.html.erb",
 		"/C/Users/david/successpath/app/views/affirmations/show.html.erb",
 		"/C/Users/david/successpath/public/index.html",
 		"/C/Users/david/successpath/db/migrate/20131010002639_add_member_id_to_goals.rb",
@@ -720,22 +687,7 @@
 		"/C/Users/david/trackingspace/app/views/layouts/_header.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/showfollowing.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
-		"/C/Users/david/trackingspace/app/views/users/showfollowers.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/_form_new_mobile.html",
-		"/C/Users/david/trackingspace/app/views/pages/_newpeople.html.erb",
-		"/C/Users/david/trackingspace/app/assets/stylesheets/application.css",
-		"/C/Users/david/trackingspace/app/views/buildings/index.html.erb",
-		"/C/Users/david/trackingspace/app/views/pages/map.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/_spacestab.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
-		"/C/Users/david/trackingspace/app/views/layouts/blank.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/home.html.erb",
-		"/C/Users/david/trackingspace/app/assets/javascripts/application.js",
-		"/C/Users/david/trackingspace/app/views/user_mailer/new_follower.html.erb",
-		"/C/Users/david/trackingspace/app/views/layouts/home_html.html.erb",
-		"/C/Users/david/trackingspace/app/assets/stylesheets/home_html.css",
-		"/C/Users/david/trackingspace/app/assets/stylesheets/landing.css",
-		"/C/Users/david/trackingspace/app/views/pages/newlearnmore.html.erb"
+		"/C/Users/david/trackingspace/app/views/users/showfollowers.html.erb"
 	],
 	"find":
 	{
@@ -758,6 +710,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"container",
+			"thumbnails",
+			"box",
+			"field",
 			"goal",
 			"bluebutton",
 			"button",
@@ -859,6 +815,7 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -866,15 +823,15 @@
 					"file": "app/assets/stylesheets/main.css.scss",
 					"settings":
 					{
-						"buffer_size": 5453,
+						"buffer_size": 6864,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								126,
-								126
+								756,
+								762
 							]
 						],
 						"settings":
@@ -884,196 +841,34 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 458.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/layouts/_header.html.erb",
-					"settings":
-					{
-						"buffer_size": 953,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								888,
-								888
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "app/assets/stylesheets/media.css.scss",
 					"settings":
 					{
-						"buffer_size": 865,
+						"buffer_size": 963,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								770,
-								770
+								752,
+								752
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 287.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/layouts/application.html.erb",
-					"settings":
-					{
-						"buffer_size": 710,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								106,
-								153
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/tasks/show.html.erb",
-					"settings":
-					{
-						"buffer_size": 445,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								29,
-								29
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/tasks/new.html.erb",
-					"settings":
-					{
-						"buffer_size": 104,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								103,
-								68
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/controllers/goals_controller.rb",
-					"settings":
-					{
-						"buffer_size": 2409,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								832,
-								832
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/views/tasks/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 450,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								382,
-								382
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 308.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
