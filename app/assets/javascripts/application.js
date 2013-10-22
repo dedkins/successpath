@@ -20,5 +20,7 @@
 $(function() {
   $('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
 });
-
+setTimeout(function() {
+    $('#notice').fadeOut('slow');
+}, 5000); // <-- time in milliseconds
 

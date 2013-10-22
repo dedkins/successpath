@@ -1,11 +1,11 @@
-class UserMailer < ActionMailer::Base
+class MemberMailer < ActionMailer::Base
   default :from => 'successpath@edkinsgroup.com'
-  layout 'user_mailer'
+  layout 'member_mailer'
 
-  def welcome_email(user)
+  def welcome_email(member)
     @member = member
     @url  = "http://www.successpath.me/members/sign_in"
-    mail(:to => user.email, :bcc => 'dedkins@edkinsgroup.com', :subject => "Welcome Aboard!")
+    mail(:to => member.email, :bcc => 'dedkins@edkinsgroup.com', :subject => "Welcome Aboard SuccessPath!")
   end
 
 end

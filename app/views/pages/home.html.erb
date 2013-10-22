@@ -7,9 +7,10 @@
 			<%= notice %>
 		</div>
 	<% end %>
-	<div style="background:#BCED91;padding:20px;border:1px solid gray;border-radius:5px;margin:0 0 10px;z-index:1;color:#333333">
+	<div class="topstatement">
 		<% if @member.mainlifetitle == nil %>
-			Now it's time to get started.  First, see the squares below?  They need your personal touch.  Just below this message is a 	button labeled "Edit your Squares", click it and update your squares.  Then start adding your goals, associate tasks with 	those goals and add a few affirmations to review each day.  Here's to your success!
+			Now it's time to get started!  This page is designed to bring front and center; your high level objectives (top colored squares), your immediate tasks and closest goals.  But since you just joined, we have a bare cupboard.<br/><br/>
+			So first thing, let's give these squares below your personal touch. Here's to your success!
 		<% elsif @goals.empty? %>
 			Looks like we could benefit from adding some goals, <%= link_to 'Click Here to Start', new_goal_path, :class => 'button-link' %>
 		<% elsif @affirmations.empty? %>
@@ -23,7 +24,9 @@
 
 	<div class="topbanner">
 		<%= link_to 'Edit Your Squares', edit_member_registration_path(@member), :method => 'get', :class => 'button-link' %>
+		<%= link_to 'New Goal', new_goal_path, :method => 'get', :class => 'button-link' %>
 		<%= link_to 'New Task', new_task_path, :method => 'get', :class => 'button-link' %>
+		<%= link_to 'New Affirmation', new_affirmation_path, :method => 'get', :class => 'button-link' %>
 	</div>
 		<%= render 'ideal_life2' %>
 		<%= render 'assets' %>
