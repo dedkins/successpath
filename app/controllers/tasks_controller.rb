@@ -61,6 +61,7 @@ class TasksController < ApplicationController
     if @task.goal_id != nil
       @goal = Goal.find(@task.goal_id)
     end
+    @goals = Goal.find_all_by_member_id(current_member)
   end
 
   # POST /tasks
@@ -92,10 +93,11 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
+    @goals = Goal.find_all_by_member_id(current_member)
 
     respond_to do |format|
       if @task.update_attributes(params[:task])
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
+        format.html { redirect_to tasks_path, notice: 'Task was successfully updated!' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

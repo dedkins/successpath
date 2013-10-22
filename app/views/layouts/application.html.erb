@@ -25,18 +25,17 @@
 
 </head>
 <body>
+<div class="container">
+  <div class="yield">
+  	<%= render 'layouts/header' %>
 
-<div class="yield">
-	<%= render 'layouts/header' %>
+  	<%= yield %>
 
-	<%= yield %>
-
+  </div>
+  <div class="footer">
+      <%= link_to "Sign Out", destroy_member_session_path, :method => :delete, :class => 'button-link' %> <%= link_to 'Help', '#', :class => 'button-link' %> <br/><br/>
+    Copyright 2013 | Edkins Group
+  </div>
 </div>
-
-<div style="clear:both;text-align:center;padding-top:30px">
-  <%= link_to "Sign Out", destroy_member_session_path, :method => :delete, :class => 'button-link' %> <%= link_to 'Help', '#', :class => 'button-link' %> <br/><br/>
-Copyright 2013 | Edkins Group
-</div>
-
 </body>
 </html>
