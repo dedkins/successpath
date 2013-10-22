@@ -10,13 +10,12 @@
 	<div style="background:#BCED91;padding:20px;border:1px solid gray;border-radius:5px;margin:0 0 10px;z-index:1;color:#333333">
 		<% if @member.mainlifetitle == nil %>
 			Now it's time to get started.  First, see the squares below?  They need your personal touch.  Just below this message is a 	button labeled "Edit your Squares", click it and update your squares.  Then start adding your goals, associate tasks with 	those goals and add a few affirmations to review each day.  Here's to your success!
-		<% end %>
-		<% if @goals.empty? %>
+		<% elsif @goals.empty? %>
 			Looks like we could benefit from adding some goals, <%= link_to 'Click Here to Start', new_goal_path, :class => 'button-link' %>
 		<% elsif @affirmations.empty? %>
 			Looks like we could benefit from adding some affirmations, <%= link_to 'Click Here to Start Adding Them', new_affirmation_path, :class => 'button-link' %>
 		<% elsif @goals.size == 1 %>
-			Really?  One goal - you're better than that! <%= link_to 'Click Here to Add Another!', new_goal_path, :class => 'button-link' %>
+			Really?  One goal? You're better than that! <%= link_to 'Click Here to Add Another!', new_goal_path, :class => 'button-link' %>
 		<% else %>
 		Great to have you back!  Let's meet some more goals!  Push yourself!  Focus on the big goals.
 		<% end %>	
