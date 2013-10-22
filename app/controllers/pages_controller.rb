@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
 
-  before_filter :authenticate_member!
-
   def home
   	if member_signed_in?
   		@member = Member.find(current_member)
