@@ -3,8 +3,8 @@
 		<div class="flipper">
 		  <div class="front" style="background:#31b7ea;color:white;text-align:center;font-size:1.5em">
 		    <div class="sectiontitle" style="color:white">
-				CashFlow<br/>
-				<description style="font-size:.5em;color:white">(<%= number_to_currency(@member.actualcf) %>)</description>
+				CashFlow Goal<br/>
+				<description style="color:white"><%= number_to_currency(@member.desiredcf) %></description>
 			</div>
 		  </div>
 		  <div class="back">

@@ -13,6 +13,8 @@
 				Looks like we could benefit from adding some goals, <%= link_to 'Click Here to Start', new_goal_path, :class => 'button-link' %>
 			<% elsif @affirmations == nil %>
 				Looks like we could benefit from adding some affirmations, <%= link_to 'Click Here to Start Adding Them', new_affirmation_path, :class => 'button-link' %>
+			<% else %>
+			Great to have you back!  Let's meet some more goals!  Push yourself!  Focus on the big goals.
 			<% end %>	
 		</div>
 	<% end %>
@@ -56,6 +58,7 @@
 				</script>
 			</div>
 		</div>
+		<%= render 'goals/goaltiles_next30' %>
 	<% else %>
 	<div class="topbanner">
 		<%= link_to 'Sign In', new_member_session_path, :method => 'get', :class => 'button-link' %> or

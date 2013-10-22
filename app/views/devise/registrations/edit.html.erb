@@ -36,7 +36,8 @@
       <div class="front" style="background:orange">
         <div class="sectiontitle" style="color:white">
           <% if @member.desiredassets.present? %>
-            <%= @member.desiredassets %>
+            Desired Assets<br/>
+            <%= number_to_currency(@member.desiredassets) %>
           <% else %>
             Flip Over and Update with Your Asset Goals
           <% end %>
@@ -44,7 +45,7 @@
       </div>
       <div class="back">
         <wordbox>
-            <name>Add your assets</name><br/>
+            <name>Asset Goals</name><br/>
               <description>
                 Desired Assets:<br/>
                 <%= f.text_field :desiredassets %>
@@ -63,7 +64,8 @@
       <div class="front" style="background:#31b7ea">
         <div class="sectiontitle" style="color:white">
           <% if @member.desiredcf.present? %>
-            <%= @member.desiredcf %>
+            Desired Cashflow<br/>
+            <%= number_to_currency(@member.desiredcf) %>
           <% else %>
             Flip Over and Update Your Cashflow Goals
           <% end %>
@@ -71,7 +73,7 @@
       </div>
       <div class="back">
         <wordbox>
-            <name>Add your cashflow goals</name><br/>
+            <name>Cashflow Goals</name><br/>
               <description>
                 Desired Monthly Cashflow:<br/>
                 <%= f.text_field :desiredcf %>
