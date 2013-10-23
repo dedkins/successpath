@@ -11,7 +11,7 @@
 
   <div class="topstatement">
     <% if @member.mainlifetitle == nil %>
-      Now it's time to get started!  This page is designed to bring front and center; your high level objectives (top colored squares), your immediate tasks and closest goals.  But since you just joined, we have a bare cupboard.<br/><br/>
+      Now it's time to get started!  The boxes below will show up on your homepage to give you reminders of your high-level objectives.  But since you just joined, they are a blank slate.<br/><br/>
       So first thing, let's give these squares below your personal touch. Hover (or touch) each to flip over and edit!
     <% else %>
       You can update/edit your tiles below by clicking (or touching) to flip and edit.  Then click the save button.
@@ -19,7 +19,10 @@
   </div>
 
 <div class="topbanner">
-  <%= f.submit 'Save', :class => 'button-link', :style => 'font-size:1.1em' %> Your Changes or <%= link_to 'Go to Home', root_path, :class => 'button-link' %>
+  <%= f.submit 'Save', :class => 'button-link', :style => 'font-size:1.1em' %> Your Changes
+  <% if @member.mainlifetitle != nil %> 
+    or <%= link_to 'Go to Home', root_path, :class => 'button-link' %>
+  <% end %>
 </div>
 
 <div class="box">
