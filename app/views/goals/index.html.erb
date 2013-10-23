@@ -1,8 +1,12 @@
 <% currently_at 'Goals'%>
 
 <div class="topstatement">
-	<% if member_signed_in? && @goals.empty? %>
+	<% if member_signed_in? %>
+		<% if @goals == nil %>
 		Looks like we should add a few goals, click the button below
+		<% else %>
+		Making progress - I like it!  Keep it up!  Remember to review them every day.
+		<% end %>
 	<% else %>
 		Below are actual goals created and used by current members, become a member and create your own.  Here's the key - these are not basic everyday goals, to get the most of these, reserve for those goals that will push you to new levels that help you grow.  Become a member today!
 	<% end %>

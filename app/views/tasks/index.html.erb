@@ -1,8 +1,12 @@
 <%= currently_at 'Tasks' %>
 
 <div class="topstatement">
-	<% if member_signed_in? && @tasks.empty? %>
+	<% if member_signed_in? %>
+		<% if @tasks == 0 %>
 		Looks like we should add a few tasks, click the button below
+		<% else %>
+		Coolio.  Getting the hang of it.  Keep it up!  Winning!
+		<% end %>
 	<% else %>
 		Below are actual tasks created and used by current members, become a member and create your own.  Here's the key - these are not basic everyday tasks, to get the most of these, reserve for those that are going to push you towards your goals and stretch you.  Go get 'em!
 	<% end %>

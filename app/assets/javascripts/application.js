@@ -26,3 +26,6 @@ setTimeout(function() {
 setTimeout(function() {
     $('#alert').fadeOut('slow');
 }, 5000); // <-- time in milliseconds
+setTimeout(function() {
+    $('.topstatement').fadeOut('slow');
+},10000); // <-- time in milliseconds
