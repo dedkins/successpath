@@ -2,7 +2,7 @@
 
 <div class="topstatement">
 	<% if member_signed_in? %>
-		<% if @goals == 0 %>
+		<% if @goals_next30 == 0 || @goals_future == 0 %>
 		Looks like we should add a few goals, click the button below
 		<% else %>
 		Making progress - I like it!  Think big! Keep it up!  Remember to review them every day.
