@@ -2,10 +2,10 @@
 
 <div class="topstatement">
 	<% if member_signed_in? %>
-		<% if @goals == nil %>
+		<% if @goals == 0 %>
 		Looks like we should add a few goals, click the button below
 		<% else %>
-		Making progress - I like it!  Keep it up!  Remember to review them every day.
+		Making progress - I like it!  Think big! Keep it up!  Remember to review them every day.
 		<% end %>
 	<% else %>
 		Below are actual goals created and used by current members, become a member and create your own.  Here's the key - these are not basic everyday goals, to get the most of these, reserve for those goals that will push you to new levels that help you grow.  Become a member today!
@@ -22,9 +22,11 @@
 
 <div class="container">
 
+	<% if @goals_next30 == 0 %>
 	<div class="box">
 		<iframe width="300" height="250" src="//www.youtube.com/embed/wvvbcVxA5Y4?autoplay=1&rel=0"></iframe>
 	</div>
+	<% end %>
 
 	<%= render 'goaltiles_next30' %>
 
