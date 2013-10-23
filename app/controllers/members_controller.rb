@@ -13,7 +13,11 @@ class MembersController < ApplicationController
   end
 
   def index
-  	@members = Member.all
+    if current_member.admin?
+  	 @members = Member.all
+    else
+      redirect_to root_path, :alert => 'Oops...looks like you stumbled onto a non-existing page!'
+    end
   end
 
   def destroy

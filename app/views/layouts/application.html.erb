@@ -7,7 +7,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta content="True" name="HandheldFriendly">
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 	<meta name="viewport" content="width=device-width">
 
   <script>
@@ -52,8 +52,9 @@
     <% if member_signed_in? %>
       <%= link_to "Sign Out", destroy_member_session_path, :method => :delete, :class => 'button-link' %> 
     <% else %>
-      <%= link_to 'Sign-In!', new_member_session_path, :class => 'button-link' %> <%= link_to "Become a Member", new_member_registration_path, :class => 'button-link' %> <%= link_to 'Help', '#', :class => 'button-link' %> <br/><br/>
+      <%= link_to 'Sign-In!', new_member_session_path, :class => 'button-link' %> <%= link_to "Become a Member", new_member_registration_path, :class => 'button-link' %>
     <% end %>
+    <%= link_to 'Help', 'mailto:dedkins@edkinsgroup.com?subject=Help with SuccessPath Please', :class => 'button-link' %> <br/><br/>
     Copyright 2013 | Edkins Group
   </div>
 </body>

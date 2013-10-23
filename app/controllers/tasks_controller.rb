@@ -19,8 +19,13 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @opentasks = Task.where("member_id = ? and achievedate is ?", current_member, nil).order("duedate ASC")
-    @closedtasks = Task.where("member_id = ? and achievedate is not ?", current_member, nil)
+    if member_signed_in?
+      @opentasks = Task.where("member_id = ? and achievedate is ?", current_member, nil).order("duedate ASC")
+      @closedtasks = Task.where("member_id = ? and achievedate is not ?", current_member, nil)
+    else
+      @opentasks = Task.limit(5)
+      @closedtasks = Task.limit(2)
+    end
 
     respond_to do |format|
       format.html # index.html.erb

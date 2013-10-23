@@ -1,5 +1,13 @@
 <% currently_at 'Goals'%>
 
+<div class="topstatement">
+	<% if member_signed_in? && @goals.empty? %>
+		Looks like we should add a few goals, click the button below
+	<% else %>
+		Below are actual goals created and used by current members, become a member and create your own.  Here's the key - these are not basic everyday goals, to get the most of these, reserve for those goals that will push you to new levels that help you grow.  Become a member today!
+	<% end %>
+</div>
+
 <div class="topbanner">
 	<% if member_signed_in? %>
 		<%= link_to 'Add New Goal', new_goal_path, :method => 'get', :class => 'button-link' %>

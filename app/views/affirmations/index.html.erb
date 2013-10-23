@@ -1,5 +1,13 @@
 <% currently_at 'Affirmations' %>
 
+<div class="topstatement">
+  <% if member_signed_in? && @affirmations.empty? %>
+    Looks like we should add a few affirmations, click the button below
+  <% else %>
+    Below are actual affirmations created and used by current members, become a member and create your own.  If you're not familiar with affirmations, let us give you a little overview:  It has been proven that you can literally change your future by changing how you look at things - including yourself - by simply writing down and repeating statements of the person you want to become.  You literally can create your reality by doing this.  Guaranteed, it will feel weird at first -  Become a member today and start yours!
+  <% end %>
+</div>
+
 <div class="topbanner">
   <% if member_signed_in? %>
     <%= link_to 'New Affirmation', new_affirmation_path, :class => 'button-link' %>

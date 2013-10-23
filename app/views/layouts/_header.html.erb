@@ -8,11 +8,11 @@
 			<nav id="utility" style="text-align:right;font-size:.8em;padding:5px 20px 0 0">
 			    <% if member_signed_in? %>
 			    <%= current_member.email %> | <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %> |
-			    <%= link_to 'Help', '#' %>
+			    <%= link_to 'Help', 'mailto:dedkins@edkinsgroup.com?subject=Help with SuccessPath Please' %>
 			    <% else %>
 			    	<%= link_to "Sign In", new_member_session_path %> | 
 			    	<%= link_to "Sign Up", new_member_registration_path %> |
-			    	<%= link_to "Help", '#' %>
+			    	<%= link_to "Help", 'mailto:dedkins@edkinsgroup.com?subject=Help with SuccessPath Please' %>
 			    <% end %>
 			</nav>
 			<%= yield :main_navigation %>

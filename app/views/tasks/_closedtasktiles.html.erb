@@ -13,11 +13,15 @@
 			        					<%= distance_of_time_in_words(Time.now,task.duedate) %> left to achieve it<br/>
 			        				<% end %>
 			        				Created <%= distance_of_time_in_words(Time.now,task.created_at) %> ago<br/>
-				        			<% if task.goal_id.present? %>Goal: <%= link_to task.goal.name, goal_path(task.goal_id) %><% end %><br/>
-				        				<%= task.duedate %><br/>
-					        			<%= link_to 'Edit', edit_task_path(task) %> | 
-					        			<%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %> |
-					        			<%= link_to 'Achieved', achieved_task_path(task) %>
+			        				<% if member_signed_in? %>
+					        			<% if task.goal_id.present? %>Goal: <%= link_to task.goal.name, goal_path(task.goal_id) %><% end %><br/>
+					        				Due Date: <%= task.duedate %><br/>
+						        			Achieved Date:<%= task.achievedate %>
+						        	<% else %>
+						        		<% if task.goal_id.present? %>Associated Goal: <%= task.goal.name %><% end %><br/>
+						        		Due Date: <%= task.duedate %><br/>
+						        		Achieved Date: <%= task.achievedate %>
+						        	<% end %>
 					        	</description>
 			        	</wordbox>
 					  </div>

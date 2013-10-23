@@ -7,6 +7,13 @@
 			<%= notice %>
 		</div>
 	<% end %>
+
+	<% if alert %>
+	    <div id="alert" style="z-index:2">
+	      <%= alert %>
+	    </div>
+	  <% end %>
+	  
 	<div class="topstatement">
 		<% if @member.mainlifetitle == nil %>
 			Now it's time to get started!  This page is designed to bring front and center; your high level objectives (top colored squares), your immediate tasks and closest goals.  But since you just joined, we have a bare cupboard.<br/><br/>
