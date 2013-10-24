@@ -10,6 +10,7 @@ gem "devise"
 gem 'jquery_datepicker'
 gem 'jquery-ui-rails'
 gem 'flexslider'
+gem 'sendgrid'
 
 # Gems used only for assets and not required
 # in production environments by default.

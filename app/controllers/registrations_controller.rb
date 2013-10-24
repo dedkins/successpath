@@ -8,7 +8,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
   	@member = Member.new(params[:member])
 	if @member.save!
-		#MemberMailer.welcome_email(@member).deliver
+		MemberMailer.welcome_email(@member).deliver
 		sign_in_and_redirect(:member, @member)
 	end
   end

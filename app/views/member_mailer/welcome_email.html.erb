@@ -4,20 +4,29 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h3>Welcome to SuccessPath!</h3>
+    <h1>Welcome to SuccessPath!</h1>
     <p>
       We are very much looking forward to seeing you succeed and hearing your success story as a result of using our simple system.
     </p>
+    <p/>
+    <hr/>
+    <h3>Account Info</h3>
     <p>
-      To login to the site, just follow this link: <%= link_to 'Login', @url %>.
+      Sign in to SuccessPath!: <%= link_to 'http://www.successpath.me', @url %>
+      <br/>
+      <font weight="bold">Your username: <%= @member.email %></font>
     </p>
-    <p>
-      Go get 'em!
-    </p>
-
-    <p>Thank you,</p>
-      <p>David Edkins</p>
-      <br/>Creator
-      <br/>SuccessPath.me
+    <p/>
+    <hr/>
+      <h3>Need help getting started?</h3>
+      <p>
+        If you need help at any time, you can always contact our support specialists by sending us an email at <%= link_to 'Successpath@edkinsgroup.com', 'mailto:successpath@edkinsgroup.com' %>. Support specialists are at your service from 7 AM to 6 PM PT, Monday through Friday.
+      </p>
+      <p>
+        Here's to your future!
+        <br/>
+        The SuccessPath! Team
+      </P>
+  
   </body>
 </html>
