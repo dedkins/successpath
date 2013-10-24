@@ -1,7 +1,21 @@
-<% @members.each do |m| %>
-	<div>
-		<%= m.email %>
-		<%= link_to 'Delete', m, method: :delete, data: { confirm: 'Are you sure?' } %>
-	</div>
-
+<table width="100%">
+	<tr>
+		<td></td>
+		<td>Email</td>
+		<td>Login Count</td>
+		<td>Last Login</td>
+		<td>Signed-Up</td>
+	</tr>
+	<% @members.each do |m| %>
+	<tr>
+		<td>
+			<%= link_to 'Edit', edit_member_registration_path(m), :class => 'button-link' %>
+	      	<%= link_to 'Delete', m, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'delete-button-link' %>
+	     </td>
+		<td><%= m.email %></td>
+		<td><%= m.sign_in_count %></td>
+		<td><%= m.last_sign_in_at %></td>
+		<td><%= m.created_at %></td>
+	</tr>
 	<% end %>
+</table>
