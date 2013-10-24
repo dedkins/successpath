@@ -35,6 +35,8 @@
 	        			<%= goal.goaldate %><br/>
 		        			<%= link_to 'Edit', edit_goal_path(goal) %> | 
 		        			<%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %> |
+		        			<%= link_to 'Show Details', goal %> | 
+		        			<%= link_to 'Add Task', new_task_path(goal) %> |
 		        			<%= link_to 'Achieved', achieved_goal_path(goal) %>
 		        		<% else %>
 	        				<%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve it<br/>

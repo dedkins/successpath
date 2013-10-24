@@ -7,8 +7,12 @@
 		<div class="headerright">
 			<nav id="utility" style="text-align:right;font-size:.8em;padding:5px 20px 0 0">
 			    <% if member_signed_in? %>
-			    <%= current_member.email %> | <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %> |
-			    <%= link_to 'Help', 'mailto:dedkins@edkinsgroup.com?subject=Help with SuccessPath Please' %>
+			    	<%= link_to current_member.email, edit_member_registration_path %> | <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %> |
+				    <% if current_member.admin? %>
+				    	<%= link_to 'Admin', members_path %>
+				    <% else %>
+				    	<%= link_to 'Help', 'mailto:dedkins@edkinsgroup.com?subject=Help with SuccessPath Please' %>
+				    <% end %>
 			    <% else %>
 			    	<%= link_to "Sign In", new_member_session_path %> | 
 			    	<%= link_to "Sign Up", new_member_registration_path %> |
