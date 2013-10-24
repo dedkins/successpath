@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-<div style="float:left;width:50%">
+<div class="goalform">
   <div class="inputbox" style="background:#e9e9e9;border-radius:5px;border:2px dashed gray;margin-right:10px">
     <% if @goal.image? %>
     <div style="width:250px">
@@ -30,7 +30,7 @@
     <% end %>
   </div>
 </div>
-<div style="float:right;width:50%">
+<div class="goalform">
   <div class="inputbox">
     <div class="field">
       Name of Goal<br />
@@ -49,7 +49,7 @@
       <%= f.number_field :progress, :class => 'inputfield' %>
     </div>
     <div class="actions">
-      <%= f.submit "Create Goal", :class => 'button-link', :style => 'font-size:1.1em' %> <%= link_to 'Cancel', goals_path, :class => 'description' %>
+      <%= f.submit "Save!", :class => 'button-link', :style => 'font-size:1.1em' %> <%= link_to 'Cancel', goals_path, :class => 'description' %>
     </div>
   </div>
 </div>
