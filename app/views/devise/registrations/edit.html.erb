@@ -45,10 +45,10 @@
       </div>
       <div class="back">
         <wordbox>
-            <name><%= f.text_field :mainlifetitle, :placeholder => "Main Life Title" %></name><br/>
-              <description>
-                <%= f.text_area :mainlifequote, :size => "30x10", :placeholder => "Add your own powerful personal statement for how you want your life to be.  Be great.  Think big." %>
-              </description>
+            <div class="field"><%= f.text_field :mainlifetitle, :placeholder => "Main Life Title", :class => 'inputfield' %></div>
+              <div class="field">
+                <%= f.text_area :mainlifequote, :size => "30x10", :placeholder => "Add your own powerful personal statement for how you want your life to be.  Be great.  Think big.", :class => 'inputfield' %>
+              </div>
           </wordbox>
       </div>
     </div>
@@ -72,10 +72,10 @@
             <name>Asset Goals</name><br/>
               <description>
                 Desired Assets:<br/>
-                <%= f.text_field :desiredassets %>
+                <%= f.text_field :desiredassets, :class => 'inputfield' %>
                 <br/>
                 Actual Assets:<br/>
-                <%= f.text_field :actualassets %>
+                <%= f.text_field :actualassets, :class => 'inputfield' %>
               </description>
           </wordbox>
       </div>
@@ -100,10 +100,10 @@
             <name>Cashflow Goals</name><br/>
               <description>
                 Desired Monthly Cashflow:<br/>
-                <%= f.text_field :desiredcf %>
+                <%= f.text_field :desiredcf, :class => 'inputfield' %>
                 <br/>
                 Actual Monthly Cashflow:<br/>
-                <%= f.text_field :actualcf %>
+                <%= f.text_field :actualcf, :class => 'inputfield' %>
               </description>
           </wordbox>
       </div>
@@ -124,9 +124,10 @@
       </div>
       <div class="back">
         <wordbox>
-              <description>
-                <%= f.text_field :actiontitle, :placeholder => 'Add Your Action Title' %>
-                <%= f.text_area :actionquote, :size => "30x10", :placeholder => "Add your powerful personal statement here.  This is about you - put something that will motivate you here" %>
+              <div class="field">
+                <%= f.text_field :actiontitle, :placeholder => 'Add Your Action Title', :class => 'inputfield' %>
+                <%= f.text_area :actionquote, :size => "30x10", :placeholder => "Add your powerful personal statement here.  This is about you - put something that will motivate you here", :class => 'inputfield' %>
+              </div>
           </wordbox>
       </div>
     </div>

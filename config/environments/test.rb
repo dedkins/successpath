@@ -7,6 +7,9 @@ Successpath::Application.configure do
   # and recreated between test runs. Don't rely on the data there!
   config.cache_classes = true
 
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+
   # Configure static asset server for tests with Cache-Control for performance
   config.serve_static_assets = true
   config.static_cache_control = "public, max-age=3600"
@@ -20,6 +23,16 @@ Successpath::Application.configure do
 
   # Raise exceptions instead of rendering exception templates
   config.action_dispatch.show_exceptions = false
+
+  config.action_mailer.smtp_settings = {
+  address: "smtp.sendgrid.net",
+  port: 587,
+  domain: ENV["DOMAIN"],
+  authentication: "plain",
+  enable_starttls_auto: true,
+  user_name: ENV["USERNAME"],
+  password: ENV["PASSWORD"]
+  }
 
   # Disable request forgery protection in test environment
   config.action_controller.allow_forgery_protection    = false
