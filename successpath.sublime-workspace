@@ -534,6 +534,14 @@
 				"buffer_size": 1975,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 3027,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -560,6 +568,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/successpath/app/views/goals/_goaltiles_future.html.erb",
+		"/C/Users/david/successpath/app/views/goals/_goaltiles_next30.html.erb",
 		"/C/Users/david/successpath/app/views/pages/home.html.erb",
 		"/C/Users/david/successpath/app/views/pages/_hometiles.html.erb",
 		"/C/Users/david/successpath/app/assets/stylesheets/flexslider.css",
@@ -575,8 +585,6 @@
 		"/C/Users/david/successpath/app/controllers/registrations_controller.rb",
 		"/C/Users/david/successpath/.env",
 		"/C/Users/david/successpath/config/environments/production.rb",
-		"/C/Users/david/successpath/app/views/goals/_goaltiles_next30.html.erb",
-		"/C/Users/david/successpath/app/views/goals/_goaltiles_future.html.erb",
 		"/C/Users/david/successpath/config/routes.rb",
 		"/C/Users/david/successpath/app/views/goals/index.html.erb",
 		"/C/Users/david/successpath/app/views/tasks/index.html.erb",
@@ -823,7 +831,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -877,6 +885,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 1876.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 3027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1406,
+								1406
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -7,10 +7,16 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
   	@member = Member.new(params[:member])
-	if @member.save!
-		MemberMailer.welcome_email(@member).deliver
-		sign_in_and_redirect(:member, @member)
-	end
+	
+    respond_to do |format|
+      if @member.save
+    		MemberMailer.welcome_email(@member).deliver
+    		sign_in_and_redirect(:member, @member)
+      else
+          format.html { render action: "new" }
+          format.json { render json: @member.errors, status: :unprocessable_entity }
+    	end
+    end
   end
 
   def edit

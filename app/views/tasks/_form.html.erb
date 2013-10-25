@@ -19,7 +19,7 @@
   <div class="inputbox">
     <div class="field">
       Associate a Goal (optional)<br />
-      <%= collection_select(@tag, :goal_id, @goals, :id, :name, {include_blank: 'None'}, :class => 'inputfield') %>
+      <%= collection_select(:task, :goal_id, @goals, :id, :name, {include_blank: 'None'}, :class => 'inputfield') %>
     </div>
     <% end %>
     <div class="field">

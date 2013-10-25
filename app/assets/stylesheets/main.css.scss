@@ -196,6 +196,7 @@ nav#main_nav {
     -ms-user-select:none;
     user-select:none;
     text-decoration: none;
+    -webkit-appearance: none;
 }
 
 .button-link:hover, .button-link:focus {
@@ -222,6 +223,7 @@ nav#main_nav {
     -ms-user-select:none;
     user-select:none;
     text-decoration: none;
+    -webkit-appearance: none;
 }
 
 .delete-button-link:hover, .button-link:focus {
@@ -388,7 +390,9 @@ div {
     color: #fff;
   }
   ul li {
-    font-size: 12px;
+    font-size: 1em;
+    color:red;
+    font-weight:bold;
     list-style: square;
   }
 }
