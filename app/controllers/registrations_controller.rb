@@ -11,7 +11,7 @@ class RegistrationsController < Devise::RegistrationsController
     respond_to do |format|
       if @member.save
     		MemberMailer.welcome_email(@member).deliver
-    		sign_in_and_redirect(:member, @member)
+    		sign_in_and_redirect @member
       else
           format.html { render action: "new" }
           format.json { render json: @member.errors, status: :unprocessable_entity }
