@@ -28,4 +28,4 @@ setTimeout(function() {
 }, 5000); // <-- time in milliseconds
 setTimeout(function() {
     $('.topstatement').fadeOut('slow');
-},10000); // <-- time in milliseconds
+},15000); // <-- time in milliseconds
