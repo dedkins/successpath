@@ -523,7 +523,7 @@
 			"file": "app/assets/stylesheets/main.css.scss",
 			"settings":
 			{
-				"buffer_size": 7329,
+				"buffer_size": 7342,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,16 +531,16 @@
 			"file": "app/assets/stylesheets/media.css.scss",
 			"settings":
 			{
-				"buffer_size": 1975,
+				"buffer_size": 2016,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/assets/javascripts/application.js",
+			"file": "app/views/pages/_hometiles.html.erb",
 			"settings":
 			{
-				"buffer_size": 1088,
-				"line_ending": "Unix"
+				"buffer_size": 4589,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -568,6 +568,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/successpath/app/views/layouts/_header.html.erb",
+		"/C/Users/david/successpath/app/assets/javascripts/application.js",
 		"/C/Users/david/successpath/app/controllers/registrations_controller.rb",
 		"/C/Users/david/successpath/app/views/devise/registrations/edit.html.erb",
 		"/C/Users/david/successpath/config/environments/test.rb",
@@ -580,7 +582,6 @@
 		"/C/Users/david/successpath/app/views/pages/home.html.erb",
 		"/C/Users/david/successpath/app/views/pages/_hometiles.html.erb",
 		"/C/Users/david/successpath/app/assets/stylesheets/flexslider.css",
-		"/C/Users/david/successpath/app/views/layouts/_header.html.erb",
 		"/C/Users/david/successpath/app/views/goals/_form.html.erb",
 		"/C/Users/david/successpath/config/environments/development.rb",
 		"/C/Users/david/successpath/Gemfile",
@@ -593,7 +594,6 @@
 		"/C/Users/david/successpath/config/environments/production.rb",
 		"/C/Users/david/successpath/config/routes.rb",
 		"/C/Users/david/successpath/app/views/affirmations/index.html.erb",
-		"/C/Users/david/successpath/app/assets/javascripts/application.js",
 		"/C/Users/david/successpath/app/controllers/tasks_controller.rb",
 		"/C/Users/david/successpath/app/views/tasks/_opentasktiles.html.erb",
 		"/C/Users/david/successpath/app/views/tasks/_closedtasktiles.html.erb",
@@ -831,7 +831,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -839,15 +839,15 @@
 					"file": "app/assets/stylesheets/main.css.scss",
 					"settings":
 					{
-						"buffer_size": 7329,
+						"buffer_size": 7342,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4012,
-								4012
+								523,
+								523
 							]
 						],
 						"settings":
@@ -857,7 +857,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1292.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -867,15 +867,15 @@
 					"file": "app/assets/stylesheets/media.css.scss",
 					"settings":
 					{
-						"buffer_size": 1975,
+						"buffer_size": 2016,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1326,
-								1326
+								504,
+								504
 							]
 						],
 						"settings":
@@ -884,33 +884,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1372.0,
+						"translation.y": 154.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/assets/javascripts/application.js",
+					"file": "app/views/pages/_hometiles.html.erb",
 					"settings":
 					{
-						"buffer_size": 1088,
+						"buffer_size": 4589,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1054,
-								1054
+								2601,
+								2601
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 777.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -13,11 +13,11 @@
 </div>
 
 <div class="box">
-  <%= link_to 'Edit', edit_goal_path(@goal) %> | <%= link_to 'Back', goals_path %><br/>
+  <%= link_to 'Edit', edit_goal_path(@goal) %> | <%= link_to 'Back', goals_path %> | <%= link_to 'Achieved!', achieved_goal_path(@goal) %><br/>
   <name><%= @goal.name %></name><br/>
   <description style="padding-left:10px">
     <%= @goal.description %><br/><br/>
-    Goal Date: <%= @goal.goaldate %>
+    Target Date: <%= @goal.goaldate %>
   </description>
 </div>
 
