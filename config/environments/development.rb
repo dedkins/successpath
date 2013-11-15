@@ -23,7 +23,7 @@ Successpath::Application.configure do
   config.action_mailer.smtp_settings = {
   address: "smtp.sendgrid.net",
   port: 587,
-  domain: ENV["DOMAIN"],
+  domain: "successpath.me",
   authentication: "plain",
   enable_starttls_auto: true,
   user_name: ENV["USERNAME"],
