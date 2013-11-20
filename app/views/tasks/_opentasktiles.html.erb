@@ -19,8 +19,10 @@
 					    <wordbox>
 			        		<name><%= task.name %></name><br/>
 				        		<description>
-				        			<% if task.duedate != nil %>
+				        			<% if task.duedate != nil && task.duedate >= Date.today %>
 			        					<%= distance_of_time_in_words(Time.now,task.duedate) %> left to achieve it<br/>
+			        				<% elsif task.duedate != nil && task.duedate < Date.today %>
+			        					 <%= distance_of_time_in_words(Time.now,task.duedate) %> overdue!<br/>
 			        				<% end %>
 				        			Created <%= distance_of_time_in_words(Time.now,task.created_at) %> ago<br/>
 					        		<% if member_signed_in? %>
