@@ -23,7 +23,7 @@ class GoalsController < ApplicationController
     else
       @goals_next30 = Goal.where("achievedate is ? and goaldate >= ? and goaldate <= ?", nil, Date.today, Date.today + 30).limit(10)
       @goals_future = Goal.where("achievedate is ? and goaldate > ?", nil, Date.today + 30).limit(10)
-      @goals = Goal.where("member_id = ? and goaldate < ?", current_member, Date.today).limit(1)
+      @goals = Goal.where("member_id = ? and goaldate < ?", Date.today).limit(1)
     end
 
     respond_to do |format|
