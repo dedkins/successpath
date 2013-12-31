@@ -1,0 +1,38 @@
+<% if @goals_past.present? %>
+	<% @goals_past.each do |goal| %>
+		<div class="box">
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+					<div class="flipper">
+					  <div class="front" style="background:black">
+					  	<% if goal.image? %>
+					    	<%= image_tag(goal.image) %>
+					    	<% if goal.goaldate %>
+					    	<div class="title"><%= number_to_percentage(goal.progress, precision: 0) %> and <%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve</div>
+					    	<% end %>
+					    <% else %>
+					    	<div class="sectiontitle"><%= goal.name %></div>
+					    <% end %>
+					  </div>
+					  <div class="back">
+					    <wordbox>
+			        		<name><%= goal.name %></name><br/>
+			        		<% if member_signed_in? %>
+				        		<description>
+				        			<%= link_to 'Edit', edit_goal_path(goal) %> | <%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %> | <%= link_to 'Show Details', goal %><br/><br/>
+				        			<%= goal.description %><br/><br/>
+				        			Target Date: <%= goal.goaldate %><br/>
+				        		</description>
+			        		<% else %>
+			        			<description>
+			        				<% if goal.goaldate %>
+			        				Created <%= distance_of_time_in_words(Time.now,goal.created_at) %> ago
+			        				<% end %>
+			        			</description>
+			        		<% end %>
+			        	</wordbox>
+					  </div>
+					</div>
+				</div>
+	        </div>
+	<% end %>
+<% end %>
