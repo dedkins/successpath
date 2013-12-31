@@ -20,7 +20,7 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     if member_signed_in?
-      @opentasks = Task.where("member_id = ? and achievedate is ? and duedate is not ?", current_member, nil, nil).order("duedate ASC")
+      @opentasks = Task.where("member_id = ? and achievedate is ?", current_member, nil)
       @closedtasks = Task.where("member_id = ? and achievedate is not ?", current_member, nil)
     else
       @opentasks = Task.limit(5)
