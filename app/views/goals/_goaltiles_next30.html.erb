@@ -5,7 +5,9 @@
 					  <div class="front" style="background:black">
 					    <% if goal.image? %>
 					    	<%= image_tag(goal.image) %>
-					    	<div class="title"><%= number_to_percentage(goal.progress, precision: 0) %> and <%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve</div>
+					    	<% if goal.goaldate %>
+					    		<div class="title"><%= number_to_percentage(goal.progress, precision: 0) %> and <%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve</div>
+					    	<% end %>
 					    <% else %>
 					    	<div class="sectiontitle"><%= goal.name %></div>
 					    <% end %>
@@ -21,8 +23,10 @@
 				        		</description>
 			        		<% else %>
 			        			<description>
-			        				<%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve it<br/>
-			        				Created <%= distance_of_time_in_words(Time.now,goal.created_at) %> ago
+			        				<% if goal.goaldate %>
+			        					<%= distance_of_time_in_words(Time.now,goal.goaldate) %> left to achieve it<br/>
+			        					Created <%= distance_of_time_in_words(Time.now,goal.created_at) %> ago
+			        				<% end %>
 			        			</description>
 			        		<% end %>
 			        	</wordbox>
