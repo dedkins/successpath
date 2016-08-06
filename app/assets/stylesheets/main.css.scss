@@ -1,6 +1,6 @@
 .header {
   margin:auto;
-  width:960px;
+  width:95%;
   height:80px;
   border-bottom:#e9e9e9
 }
@@ -61,7 +61,7 @@ nav#main_nav {
   text-align:center;
   margin-top:50px;
   height:150px;
-  width:960px;
+  width:95%;
   margin:auto;
   position: relative; /* to keep .footer on bottom */
   bottom: 0px;    /* to keep .footer on bottom */
@@ -79,7 +79,7 @@ nav#main_nav {
   padding:20px 0 20px 10px;
   margin-top:10px;
   background:#e9e9e9;
-  font-size:1.2em;
+  font-size:1em;
   margin:auto;
 }
 .goalform {
@@ -181,7 +181,7 @@ nav#main_nav {
 }
 .button-link {
     margin-left:10px;
-    padding: 10px 15px;
+    padding: 5px 8px;
     background: #4479BA;
     color: #FFF !important;
     -webkit-border-radius: 4px;
@@ -303,7 +303,7 @@ html{
 }
 body {
   height:100%;
-	font-size:1.2em;
+	font-size:1em;
 	color: gray;
 	font-family: 'Lato', sans-serif;
 }
@@ -342,8 +342,6 @@ div {
 #notice {
   background: green;
   color:white;
-  border-radius:5px;
-  border:1px solid gray;
   padding:10px;
   margin:10px 0;
 }
@@ -351,8 +349,6 @@ div {
 #alert {
   background: red;
   color:white;
-  border-radius:5px;
-  border:1px solid gray;
   padding:10px;
   margin:10px 0;
 }
@@ -360,8 +356,6 @@ div {
 .topstatement {
   background:#BCED91;
   padding:20px;
-  border:1px solid gray;
-  border-radius:5px;
   margin:0 0 10px;
   color:#333333
 }
