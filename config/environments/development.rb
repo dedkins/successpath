@@ -26,8 +26,8 @@ Successpath::Application.configure do
   domain: "successpath.me",
   authentication: "plain",
   enable_starttls_auto: true,
-  user_name: ENV["USERNAME"],
-  password: ENV["PASSWORD"]
+  user_name: "dedkins@edkinsgroup.com",
+  password: "pepper96"
   }
 
   # Print deprecation notices to the Rails logger

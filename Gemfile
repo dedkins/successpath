@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-ruby '1.9.3'
+ruby '2.3.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -34,7 +34,6 @@ end
 group :test do
 	gem 'rspec', '2.0.1'
 	gem 'webrat', '0.7.1'
-	gem 'foreman', '0.61.0'
 end
 
 gem 'jquery-rails'
