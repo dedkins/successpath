@@ -11,13 +11,14 @@
 					    <% end %>
 					  </div>
 					  <div class="back">
+              <div style="padding:20px">
 					    <wordbox>
 			        		<name><%= goal.name %></name><br/>
 			        		<% if member_signed_in? %>
 				        		<description>
 				        			<%= link_to 'Edit', edit_goal_path(goal) %> | <%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %> | <%= link_to 'Show Details', goal %><br/><br/>
 				        			<%= goal.description %><br/><br/>
-				        			Target Date: <%= goal.goaldate %><br/>
+				        			Target Date: <%= goal.goaldate.strftime('%m/%d/%Y') %><br/>
 				        		</description>
 			        		<% else %>
 			        			<description>
@@ -28,6 +29,7 @@
 			        			</description>
 			        		<% end %>
 			        	</wordbox>
+              </div>
 					  </div>
 					</div>
 				</div>
