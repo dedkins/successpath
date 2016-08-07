@@ -87,7 +87,20 @@ nav#main_nav {
   margin:10px;
   width:460px;
 }
-
+.showpicturebox{
+  width:100%;
+  float:left
+}
+.showtopinfobanner{
+  width: 89%;
+  padding:20px 40px;
+  position:absolute;
+  background:black;
+  color:white;
+}
+.showtopinfobanner a{
+  color:orange;
+}
 .box {
   width:32%;
   float:left;
@@ -99,10 +112,11 @@ nav#main_nav {
   }
   name {
     font-size:2em;
+    font-weight:bold;
     color:gray;
   }
   description {
-    font-size:.8em;
+    font-size:.9em;
     color:gray;
     margin:auto;
   }

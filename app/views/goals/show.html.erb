@@ -1,8 +1,11 @@
 <%= currently_at 'Goals' %>
 
 <p id="notice"><%= notice %></p>
+<div class="topbanner" style="margin:10px 0">
+     <%= link_to 'Add New Task', new_task_path(:goal => @goal.id), :method => 'get', :class => 'button-link' %>
+  </div>
 
-<div class="box">
+<div class="showpicturebox" style="margin-top:80px">
   <% if @goal.image? %>
     <%= image_tag(@goal.image) %>
   <% else %>
@@ -12,13 +15,18 @@
   <% end %> 
 </div>
 
-<div class="box">
-  <%= link_to 'Edit', edit_goal_path(@goal) %> | <%= link_to 'Back', goals_path %> | <%= link_to 'Achieved!', achieved_goal_path(@goal) %><br/>
-  <name><%= @goal.name %></name><br/>
+<div class="showtopinfobanner">
+  <div style="float:left">
+  <name style="font-size:1.75em;font-weight:bold">
+    <%= @goal.name %>
+  </name>
   <description style="padding-left:10px">
-    <%= @goal.description %><br/><br/>
+    <%= @goal.description %>
     Target Date: <%= @goal.goaldate %>
   </description>
+  </div>
+  <div style="float:right">
+  <%= link_to 'Edit', edit_goal_path(@goal) %> | <%= link_to 'Back', goals_path %> | <%= link_to 'Achieved!', achieved_goal_path(@goal) %></div>
 </div>
 
 <div style="clear:both"/>
@@ -39,9 +47,7 @@
 
 <div>
 
-  <div class="topbanner" style="margin-top:10px">
-     <%= link_to 'Add New Task', new_task_path(:goal => @goal.id), :method => 'get', :class => 'button-link' %>
-  </div>
+  
 
 <%= render 'tasks/opentasktiles' %>
 
