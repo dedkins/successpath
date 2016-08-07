@@ -28,7 +28,7 @@
   </div>
   <div style="float:right">
   <%= link_to 'Edit', edit_goal_path(@goal) %> | <%= link_to 'Back', goals_path %> | <%= link_to 'Achieved!', achieved_goal_path(@goal) %>
-    <div style="padding-top:10px;font-size:1.25em">Target: <%= @goal.goaldate.strftime('%m/%d/%Y') %></div>
+    <div style="padding-top:10px;font-size:1.25em">Target Date: <% if @goal.goaldate.present? %><%= @goal.goaldate.strftime('%m/%d/%Y') %><% else %>None Selected<% end %></div>
   </div>
 </div>
 
