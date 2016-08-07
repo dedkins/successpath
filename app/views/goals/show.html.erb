@@ -5,7 +5,7 @@
      <%= link_to 'Add New Task', new_task_path(:goal => @goal.id), :method => 'get', :class => 'button-link' %>
   </div>
 
-<div class="showpicturebox" style="margin-top:80px">
+<div class="showpicturebox" >
   <% if @goal.image? %>
     <%= image_tag(@goal.image) %>
   <% else %>
@@ -18,15 +18,18 @@
 <div class="showtopinfobanner">
   <div style="float:left">
   <name style="font-size:1.75em;font-weight:bold">
-    <%= @goal.name %>
+    <%= @goal.name %> 
   </name>
-  <description style="padding-left:10px">
-    <%= @goal.description %>
-    Target Date: <%= @goal.goaldate %>
-  </description>
+    <div>
+      <description style="padding-left:10px">
+        <%= @goal.description %>
+      </description>
+    </div>
   </div>
   <div style="float:right">
-  <%= link_to 'Edit', edit_goal_path(@goal) %> | <%= link_to 'Back', goals_path %> | <%= link_to 'Achieved!', achieved_goal_path(@goal) %></div>
+  <%= link_to 'Edit', edit_goal_path(@goal) %> | <%= link_to 'Back', goals_path %> | <%= link_to 'Achieved!', achieved_goal_path(@goal) %>
+    <div style="padding-top:10px;font-size:1.25em">Target: <%= @goal.goaldate.strftime('%m/%d/%Y') %></div>
+  </div>
 </div>
 
 <div style="clear:both"/>
